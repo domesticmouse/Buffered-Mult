@@ -1,6 +1,6 @@
 # Buffered-Mult
 
-A buffered mult (multiple) circuit designed for Eurorack modular synthesizers.
+A 3-channel active buffered mult (multiple) circuit designed for Eurorack modular synthesizers.
 
 ## Purpose
 
@@ -14,24 +14,34 @@ This **buffered mult circuit** solves that problem by using active operational a
 - **Impedance Isolation:** High input impedance presents virtually no load to the source signal, while low output impedance cleanly drives downstream module inputs.
 - **Channel Isolation:** Prevents attached modules from loading or interfering with each other.
 
+---
+
+## Specifications
+
 ### Dimensions
-Height: 3U  
-Width: 4HP
+- **Height:** 3U (Eurorack format)
+- **Width:** 4HP
 
 ### Inputs
-Three 3.5mm mono input jacks. 
-Second input is normalled to the first input.
-Third input is normalled to the second input.
-100k pulldown resistors on the inputs to prevent floating.
+- **3× 3.5 mm mono input jacks:**
+  - Input 2 is normalled to Input 1.
+  - Input 3 is normalled to Input 2.
+- **Cascading Normaling Routing:**
+  - **1 Input patched (Input 1):** Functions as a **1×9** mult (1 input split to 9 outputs).
+  - **2 Inputs patched (Inputs 1 & 2):** Functions as **1×3** and **1×6** mults.
+  - **3 Inputs patched (Inputs 1, 2 & 3):** Functions as **3 independent 1×3** mults.
+- **100 kΩ pulldown resistors** on inputs to prevent floating inputs when unpatched.
 
 ### Outputs
-Three 3.5mm mono output jacks connected to each input.
-A pair of LEDs to indicate signal + and - voltages.
+- **9× 3.5 mm mono output jacks:** 3 dedicated buffered outputs for each of the 3 input channels.
+- **Bipolar LED Indication:** A pair of opposing-polarity LEDs per channel to indicate positive (+) and negative (-) voltage states.
 
-### Circuit design
+---
 
-- TL074 Operational amplifiers configured as unity-gain buffers
-- Opposing polarity LEDs to indicate + and - signal
-- 2x5 pin IDC connector for +-12V power supply
-- Power supply decoupling capacitors 
-- Inverted power protection via schottky diodes
+## Circuit Design
+
+- **TL074 Operational Amplifiers:** Configured as high-impedance unity-gain buffers.
+- **Visual Feedback:** Opposing-polarity LED pair per channel for signal polarity  indication.
+- **Power Connector:** Standard 2×5-pin IDC header for Eurorack ±12V power connection.
+- **Power Filtering:** Power supply decoupling capacitors per IC for noise mitigation.
+- **Power Protection:** Reverse-polarity protection via Schottky diodes.
