@@ -1,6 +1,6 @@
 # KiCad Schematic Design Report: Buffered-Mult.kicad_sch
 
-- **Date:** 2026-07-31T16:58:02
+- **Date:** 2026-07-31T21:14:42
 - **KiCad Tool Version:** Eeschema 10.0.4
 - **Design Source:** Buffered-Mult.kicad_sch
 
@@ -368,86 +368,86 @@
 - **R3** - Pin 1 / passive
 - **R18** - Pin 1 / passive
 
-### Net: Net-(R10-Pad2)
-- **R10** - Pin 2 / passive
-- **U2** - Pin 1 / output
-
-### Net: Net-(R11-Pad2)
-- **R11** - Pin 2 / passive
-- **U2** - Pin 7 / output
-
-### Net: Net-(R12-Pad2)
-- **R12** - Pin 2 / passive
-- **U2** - Pin 8 / output
-
-### Net: Net-(R13-Pad2)
-- **R13** - Pin 2 / passive
-- **U3** - Pin 1 / output
-
-### Net: Net-(R14-Pad2)
-- **R14** - Pin 2 / passive
-- **U3** - Pin 7 / output
-
-### Net: Net-(R15-Pad2)
-- **R15** - Pin 2 / passive
-- **U3** - Pin 8 / output
-
-### Net: Net-(R7-Pad2)
+### Net: Net-(U1A--)
 - **R7** - Pin 2 / passive
 - **U1** - Pin 1 / output
+- **U1** - Pin 2 (-_2) / input
 
-### Net: Net-(R8-Pad2)
+### Net: Net-(U1B--)
 - **R8** - Pin 2 / passive
+- **U1** - Pin 6 (-_6) / input
 - **U1** - Pin 7 / output
 
-### Net: Net-(R9-Pad2)
+### Net: Net-(U1C--)
 - **R9** - Pin 2 / passive
 - **U1** - Pin 8 / output
+- **U1** - Pin 9 (-_9) / input
+
+### Net: Net-(U2A--)
+- **R10** - Pin 2 / passive
+- **U2** - Pin 1 / output
+- **U2** - Pin 2 (-_2) / input
+
+### Net: Net-(U2B--)
+- **R11** - Pin 2 / passive
+- **U2** - Pin 6 (-_6) / input
+- **U2** - Pin 7 / output
+
+### Net: Net-(U2C--)
+- **R12** - Pin 2 / passive
+- **U2** - Pin 8 / output
+- **U2** - Pin 9 (-_9) / input
+
+### Net: Net-(U3A--)
+- **R13** - Pin 1 / passive
+- **U3** - Pin 1 / output
+- **U3** - Pin 2 (-_2) / input
+
+### Net: Net-(U3B--)
+- **R14** - Pin 2 / passive
+- **U3** - Pin 6 (-_6) / input
+- **U3** - Pin 7 / output
+
+### Net: Net-(U3C--)
+- **R15** - Pin 2 / passive
+- **U3** - Pin 8 / output
+- **U3** - Pin 9 (-_9) / input
 
 ### Net: OUTPUT1-1
 - **J5** - Pin T / passive
 - **R7** - Pin 1 / passive
-- **U1** - Pin 2 (-_2) / input
 
 ### Net: OUTPUT1-2
 - **J6** - Pin T / passive
 - **R8** - Pin 1 / passive
-- **U1** - Pin 6 (-_6) / input
 
 ### Net: OUTPUT1-3
 - **J7** - Pin T / passive
 - **R9** - Pin 1 / passive
-- **U1** - Pin 9 (-_9) / input
 
 ### Net: OUTPUT2-1
 - **J8** - Pin T / passive
 - **R10** - Pin 1 / passive
-- **U2** - Pin 2 (-_2) / input
 
 ### Net: OUTPUT2-2
 - **J9** - Pin T / passive
 - **R11** - Pin 1 / passive
-- **U2** - Pin 6 (-_6) / input
 
 ### Net: OUTPUT2-3
 - **J10** - Pin T / passive
 - **R12** - Pin 1 / passive
-- **U2** - Pin 9 (-_9) / input
 
 ### Net: OUTPUT3-1
 - **J11** - Pin T / passive
-- **R13** - Pin 1 / passive
-- **U3** - Pin 2 (-_2) / input
+- **R13** - Pin 2 / passive
 
 ### Net: OUTPUT3-2
 - **J12** - Pin T / passive
 - **R14** - Pin 1 / passive
-- **U3** - Pin 6 (-_6) / input
 
 ### Net: OUTPUT3-3
 - **J13** - Pin T / passive
 - **R15** - Pin 1 / passive
-- **U3** - Pin 9 (-_9) / input
 
 ## Unconnected & No-Connect Pins
 

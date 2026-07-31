@@ -4,11 +4,11 @@ Here is a detailed engineering review of the [Buffered-Mult.kicad_sch](Buffered-
 
 ### 🚨 Critical Design Mistakes (Must Fix)
 
-#### 1. [Resolved] Missing Output Protection Resistors
-* **Status:** Resolved in schematic (added series resistors `R7`–`R15`).
-* **Issue:** All 9 op-amp outputs (`OUTPUT1-1` through `OUTPUT3-3`) were connected directly to the output jack tip pins without any series resistors.
-* **Why it's a problem:** In modular synth patch bays, patch cables are frequently plugged/unplugged, momentarily shorting output tips to ground or plugging outputs directly into other powered outputs. Connecting a TL074 output directly to ground or another output will draw excessive short-circuit current, cause signal distortion across other channels on the IC, and potentially destroy the op-amp.
-* **Fix:** Add a **1 kΩ (or 470 Ω)** resistor in series between every op-amp output pin and its corresponding output jack tip (9 resistors total: `R4`–`R12`). 1 kΩ limits short-circuit current to safe levels while presenting negligible voltage drop to standard module input impedances (100 kΩ).
+#### 1. [Resolved] Missing Output Protection Resistors & Stable Buffer Configuration
+* **Status:** Resolved in schematic (added series resistors `R7`–`R15` and closed feedback loops directly at the op-amp pins for stable unity-gain follower configuration).
+* **Issue:** All 9 op-amp outputs (`OUTPUT1-1` through `OUTPUT3-3`) were originally connected directly to the output jack tip pins without series resistors, and later closed in a precision buffer configuration that risked instability under capacitive loads.
+* **Why it's a problem:** In modular synths, shorting outputs to ground is common during patching. Direct connections cause excessive current draw and damage op-amps. Close-loop feedback after the resistor (precision buffer) introduces phase lag under capacitive loads (long patch cables), causing op-amp high-frequency oscillation.
+* **Fix:** Add a **1 kΩ** resistor in series with each output, and close the feedback loop **before** the resistor (directly at the op-amp output/inverting input pins) to guarantee absolute stability and short-circuit protection.
 
 #### 2. [Resolved] Missing Ground Reference for the LED Driver Feedback Loop
 * **Status:** Resolved in schematic (added ground resistors `R4`–`R6`).
@@ -56,12 +56,6 @@ Here is a detailed engineering review of the [Buffered-Mult.kicad_sch](Buffered-
 
 ---
 
-### 📋 Outstanding Tasks to be Completed
+### 📋 Outstanding Tasks
 
-#### 1. Change Precision Buffer Configuration to Simple Buffer Configuration
-* **Status:** Outstanding.
-* **Issue:** The feedback loops for the 9 output channels are closed *after* the series protection resistors (at the output jacks). E.g., `U1`'s inverting input Pin 2 is connected to `J5` Pin T, rather than directly to `U1`'s output Pin 1.
-* **Risk:** Closing the feedback loop after the $1\text{ k}\Omega$ resistor introduces a phase lag when driving capacitive loads (like long modular patch cables). This phase lag is highly likely to cause the TL074 JFET op-amps to oscillate at high frequencies, creating noise in the audio path or pitch tracking issues.
-* **Required Fix:** Move the feedback loop closure to be **before** the series resistor (directly at the op-amp output pin). Specifically:
-  * Connect the inverting input (`-`) directly to the op-amp output pin (e.g., connect Pin 2 directly to Pin 1 for Channel A).
-  * Place the $1\text{ k}\Omega$ resistor (e.g., `R7`) in series between the op-amp output pin (Pin 1) and the output jack tip pin (`J5` Pin T).
+* **All tasks are completed!** The schematic now incorporates all suggested engineering review fixes and design guidelines, ensuring stability, short-circuit protection, reverse-voltage protection, signal filtering, and correct LED indicator current.
