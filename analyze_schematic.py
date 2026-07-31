@@ -6,13 +6,13 @@ suitable for LLM engineering review.
 """
 
 import argparse
-import datetime
 import os
 import re
 import subprocess
 import sys
 import tempfile
 import xml.etree.ElementTree as ET
+from contextlib import suppress
 
 # Common power net name patterns
 POWER_NET_PATTERNS = [
@@ -38,7 +38,7 @@ def check_for_sheets(filepath):
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
-    except Exception as e:
+    except OSError as e:
         sys.stderr.write(f"Error reading schematic file: {e}\n")
         sys.exit(1)
 
@@ -73,7 +73,7 @@ def check_kicad_cli():
     Verifies that kicad-cli is installed and runs.
     """
     try:
-        subprocess.run(['kicad-cli', '--version'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+        subprocess.run(['kicad-cli', '--version'], capture_output=True, check=True)
         return True
     except (subprocess.SubprocessError, FileNotFoundError):
         return False
@@ -84,7 +84,7 @@ def export_netlist(sch_path, xml_path):
     """
     cmd = ['kicad-cli', 'sch', 'export', 'netlist', '--format', 'kicadxml', '-o', xml_path, sch_path]
     try:
-        result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
+        subprocess.run(cmd, capture_output=True, text=True, check=True)
         return True
     except subprocess.CalledProcessError as e:
         sys.stderr.write(f"Failed to export netlist via kicad-cli:\n{e.stderr}\n")
@@ -97,7 +97,7 @@ def parse_xml_netlist(xml_path):
     try:
         tree = ET.parse(xml_path)
         root = tree.getroot()
-    except Exception as e:
+    except (ET.ParseError, OSError) as e:
         sys.stderr.write(f"Error parsing XML netlist: {e}\n")
         sys.exit(1)
 
@@ -434,7 +434,7 @@ def main():
                 with open(args.output, 'w', encoding='utf-8') as out_f:
                     out_f.write(markdown_content)
                 print(f"Report successfully saved to {args.output}")
-            except Exception as e:
+            except OSError as e:
                 sys.stderr.write(f"Error writing output file: {e}\n")
                 sys.exit(1)
         else:
@@ -443,10 +443,8 @@ def main():
     finally:
         # Cleanup temporary XML file
         if os.path.exists(temp_xml_path):
-            try:
+            with suppress(OSError):
                 os.remove(temp_xml_path)
-            except Exception:
-                pass
 
 if __name__ == "__main__":
     main()
