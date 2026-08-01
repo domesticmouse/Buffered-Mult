@@ -6465,11 +6465,13 @@
 		)
 		(property "LCSC" "C21190"
 			(at 116.84 44.4499 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -6556,11 +6558,13 @@
 		)
 		(property "LCSC" "C21190"
 			(at 214.63 31.7499 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -6647,11 +6651,13 @@
 		)
 		(property "LCSC" "C2878713"
 			(at 256.54 92.7099 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "8"
@@ -6850,11 +6856,13 @@
 		)
 		(property "LCSC" "C2878713"
 			(at 147.32 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "8"
@@ -7138,11 +7146,13 @@
 		)
 		(property "LCSC" "C2878713"
 			(at 119.38 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "8"
@@ -7263,11 +7273,13 @@
 		)
 		(property "LCSC" "C2878713"
 			(at 176.53 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "5"
@@ -7553,11 +7565,13 @@
 		)
 		(property "LCSC" "C21190"
 			(at 142.24 83.8199 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -7987,11 +8001,13 @@
 		)
 		(property "LCSC" "C2878713"
 			(at 97.79 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "5"
@@ -8192,11 +8208,13 @@
 		)
 		(property "LCSC" "C14663"
 			(at 259.08 144.7799 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8281,11 +8299,13 @@
 		)
 		(property "LCSC" "C2878713"
 			(at 97.79 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "8"
@@ -8408,11 +8428,13 @@
 		)
 		(property "LCSC" "C21190"
 			(at 91.44 83.8199 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -8577,11 +8599,13 @@
 		)
 		(property "LCSC" "C2878713"
 			(at 175.26 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "14"
@@ -8782,11 +8806,13 @@
 		)
 		(property "LCSC" "C2878713"
 			(at 246.38 92.7099 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "5"
@@ -9153,11 +9179,13 @@
 		)
 		(property "LCSC" "C2878713"
 			(at 146.05 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "14"
@@ -9517,11 +9545,13 @@
 		)
 		(property "LCSC" "C25803"
 			(at 44.45 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -9776,11 +9806,13 @@
 		)
 		(property "LCSC" "C21190"
 			(at 139.7 119.3799 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -9952,11 +9984,13 @@
 		)
 		(property "LCSC" "C2878713"
 			(at 266.7 92.7099 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "14"
@@ -10077,11 +10111,13 @@
 		)
 		(property "LCSC" "C2878713"
 			(at 147.32 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "5"
@@ -10282,11 +10318,13 @@
 		)
 		(property "LCSC" "C2878713"
 			(at 96.52 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "14"
@@ -10565,11 +10603,13 @@
 		)
 		(property "LCSC" "C14663"
 			(at 246.38 144.7799 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -10654,11 +10694,13 @@
 		)
 		(property "LCSC" "C2878713"
 			(at 121.92 22.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "5"
@@ -10779,11 +10821,13 @@
 		)
 		(property "LCSC" "C21190"
 			(at 46.99 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -10870,11 +10914,13 @@
 		)
 		(property "LCSC" "C14663"
 			(at 259.08 130.8099 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -11039,11 +11085,13 @@
 		)
 		(property "LCSC" "C21190"
 			(at 213.36 106.6799 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -11095,7 +11143,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_5x3"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.4"
 			(at 224.4852 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -11130,11 +11178,13 @@
 		)
 		(property "LCSC" "C46550416"
 			(at 227.33 143.8909 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -11304,11 +11354,13 @@
 		)
 		(property "LCSC" "C21190"
 			(at 46.99 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -11486,11 +11538,13 @@
 		)
 		(property "LCSC" "C21190"
 			(at 114.3 119.3799 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -11577,11 +11631,13 @@
 		)
 		(property "LCSC" "C21190"
 			(at 92.71 44.4499 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -11927,11 +11983,13 @@
 		)
 		(property "LCSC" "C14858"
 			(at 58.42 121.9199 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -12094,11 +12152,13 @@
 		)
 		(property "LCSC" "C25803"
 			(at 44.45 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -12185,11 +12245,13 @@
 		)
 		(property "LCSC" "C14663"
 			(at 246.38 130.8099 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -12508,11 +12570,13 @@
 		)
 		(property "LCSC" "C21190"
 			(at 46.99 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -12597,11 +12661,13 @@
 		)
 		(property "LCSC" "C25803"
 			(at 44.45 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -12688,11 +12754,13 @@
 		)
 		(property "LCSC" "C14663"
 			(at 271.78 144.7799 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -12779,11 +12847,13 @@
 		)
 		(property "LCSC" "C21190"
 			(at 142.24 44.4499 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -12946,11 +13016,13 @@
 		)
 		(property "LCSC" "C2878713"
 			(at 175.26 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "8"
@@ -13239,11 +13311,13 @@
 		)
 		(property "LCSC" "C2878713"
 			(at 120.65 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "14"
@@ -13444,11 +13518,13 @@
 		)
 		(property "LCSC" "C21190"
 			(at 214.63 69.8499 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -13535,11 +13611,13 @@
 		)
 		(property "LCSC" "C21190"
 			(at 114.3 83.8199 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -13591,7 +13669,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_5x3"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.4"
 			(at 224.4852 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -13626,11 +13704,13 @@
 		)
 		(property "LCSC" "C46550416"
 			(at 227.33 129.9209 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -13887,11 +13967,13 @@
 		)
 		(property "LCSC" "C14663"
 			(at 271.78 130.8099 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -13978,11 +14060,13 @@
 		)
 		(property "LCSC" "C14858"
 			(at 58.42 59.6899 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -14034,7 +14118,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-323"
+		(property "Footprint" "Diode_SMD:D_SMA_Handsoldering"
 			(at 246.38 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -14069,11 +14153,13 @@
 		)
 		(property "LCSC" "C2480"
 			(at 248.92 60.6424 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -14329,11 +14415,13 @@
 		)
 		(property "LCSC" "C21190"
 			(at 90.17 119.3799 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -14511,11 +14599,13 @@
 		)
 		(property "LCSC" "C14858"
 			(at 58.42 88.8999 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -14645,7 +14735,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-323"
+		(property "Footprint" "Diode_SMD:D_SMA_Handsoldering"
 			(at 256.54 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -14680,11 +14770,13 @@
 		)
 		(property "LCSC" "C2480"
 			(at 259.08 28.8924 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
