@@ -1,6 +1,6 @@
 # Buffered-Mult
 
-A 3-channel active buffered mult (multiple) circuit designed for Eurorack modular synthesizers.
+A 3-channel active buffered mult (multiple) circuit designed for Eurorack modular synthesizers. View this in [KiCanvas](https://kicanvas.org/?repo=https%3A%2F%2Fgithub.com%2Fdomesticmouse%2FBuffered-Mult)
 
 ## Purpose
 
