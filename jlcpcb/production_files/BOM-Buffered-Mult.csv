@@ -1,0 +1,27 @@
+Comment,Designator,Footprint,LCSC,Quantity
+100K,"R1,R2,R3",R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,C25803,3
+100nF,"C1,C2,C3,C4,C5,C6",C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,C14663,6
+100pF,"C10,C11,C9",C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,C14858,3
+10uF/25V,"C7,C8",CP_Elec_5x5.4,C46550416,2
+1k,"R10,R11,R12,R13,R14,R15,R16,R17,R18,R4,R5,R6,R7,R8,R9",R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,C21190,15
+D_Schottky,"D7,D8",D_SMA_Handsoldering,C2480,2
+TL074,"U1,U2,U3",SOIC-14_3.9x8.7mm_P1.27mm,C2878713,3
+OUTPUT3-3,J13,Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,,1
+OUTPUT3-2,J12,Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,,1
+OUTPUT3-1,J11,Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,,1
+OUTPUT2-3,J10,Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,,1
+OUTPUT2-2,J9,Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,,1
+OUTPUT2-1,J8,Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,,1
+OUTPUT1-3,J7,Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,,1
+OUTPUT1-2,J6,Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,,1
+OUTPUT1-1,J5,Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,,1
+INPUT3,J4,Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,,1
+INPUT2,J3,Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,,1
+INPUT1,J2,Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,,1
+Eurorack PWR,J1,IDC-Header_2x05_P2.54mm_Vertical,,1
+LED,D6,LED_D3.0mm_FlatTop,,1
+LED,D5,LED_D3.0mm_FlatTop,,1
+LED,D4,LED_D3.0mm_FlatTop,,1
+LED,D3,LED_D3.0mm_FlatTop,,1
+LED,D2,LED_D3.0mm_FlatTop,,1
+LED,D1,LED_D3.0mm_FlatTop,,1
