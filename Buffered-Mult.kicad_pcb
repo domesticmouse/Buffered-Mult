@@ -14040,6 +14040,17 @@
 		)
 	)
 	(gr_rect
+		(start 52.5 132.5)
+		(end 57.5 137.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "B.SilkS")
+		(uuid "a3661446-397c-45fd-ab6a-54f0991da8d1")
+	)
+	(gr_rect
 		(start 30 30)
 		(end 60 140)
 		(stroke
@@ -14322,18 +14333,6 @@
 					(xy 39.407524 138.16604) (xy 39.46715 138.133814) (xy 39.53516 138.113963) (xy 39.613494 138.107041)
 				)
 			)
-		)
-	)
-	(gr_text "JLCJLCJLCJLC"
-		(at 59.4 139.4 0)
-		(layer "B.SilkS")
-		(uuid "6c486cb7-c099-4d61-87c0-fc4e1fb56b3a")
-		(effects
-			(font
-				(size 1.5 1.5)
-				(thickness 0.1)
-			)
-			(justify left bottom mirror)
 		)
 	)
 	(segment
