@@ -20,7 +20,9 @@ This **buffered mult circuit** solves that problem by using active operational a
 
 ### Dimensions
 - **Height:** 3U (Eurorack format)
-- **Width:** 4HP
+- **Width:** 6HP
+
+See Exploding Shed's [Eurorack Dimensions Guide](https://www.exploding-shed.com/synth-diy-guides/standards-of-eurorack/eurorack-dimensions/) for sizing a 6hp module.
 
 ### Inputs
 - **3× 3.5 mm mono input jacks:**
