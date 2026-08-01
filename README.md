@@ -47,3 +47,11 @@ See Exploding Shed's [Eurorack Dimensions Guide](https://www.exploding-shed.com/
 - **Power Connector:** Standard 2×5-pin IDC header for Eurorack ±12V power connection.
 - **Power Filtering:** Power supply decoupling capacitors per IC for noise mitigation.
 - **Power Protection:** Reverse-polarity protection via Schottky diodes.
+
+## License
+
+BufferedMult is open source and available under the [Apache License 2.0](LICENSE).
+
+## Disclaimer
+
+This is not an official Google product.
