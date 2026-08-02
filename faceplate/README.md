@@ -42,9 +42,78 @@ The panel accommodates **3 identical channel groups** (Channel 1, Channel 2, Cha
 
 | Position | Left Column | Right Column |
 | :--- | :--- | :--- |
-| **Top Row** | Positive LED Indicator (+) | Negative LED Indicator (-) |
+| **Top Row** | Negative LED Indicator (-) | Positive LED Indicator (+) | 
 | **Middle Row** | Channel Input Jack | Output Jack 1 |
 | **Bottom Row** | Output Jack 2 | Output Jack 3 |
+
+### Faceplate Component Placements
+
+Faceplate to Control Panel offset = (128.5 - 110)/2 = 9.25mm
+
+Measurements from top left of control board.
+
+#### Channel 1
+
+- D1: Negative LED Indicator (-)
+  - x: 5.77mm
+  - y: 7mm
+- D2: Positive LED Indicator (+)
+  - x: 11.27mm
+  - y: 7mm
+- J2: Channel 1 Input Jack
+  - x: 8.48mm
+  - y: 15mm
+- J5: Channel 1 Output Jack 1
+  - x: 21.52mm
+  - y: 15mm
+- J6: Channel 1 Output Jack 2
+  - x: 8.48mm
+  - y: 25mm
+- J7: Channel 1 Output Jack 3
+  - x: 21.52mm
+  - y: 25mm
+
+#### Channel 2
+
+- D3: Negative LED Indicator (-)
+  - x: 5.77mm
+  - y: 36mm
+- D4: Positive LED Indicator (+)
+  - x: 11.27mm
+  - y: 36mm
+- J3: Channel 2 Input Jack
+  - x: 8.48mm
+  - y: 44mm
+- J8: Channel 2 Output Jack 1
+  - x: 21.52mm
+  - y: 44mm
+- J9: Channel 2 Output Jack 2
+  - x: 8.48mm
+  - y: 54mm
+- J10: Channel 2 Output Jack 3
+  - x: 21.52mm
+  - y: 54mm
+
+#### Channel 3
+
+- D5: Negative LED Indicator (-)
+  - x: 5.77mm
+  - y: 65mm
+- D6: Positive LED Indicator (+)
+  - x: 11.27mm
+  - y: 65mm
+- J4: Channel 3 Input Jack
+  - x: 8.48mm
+  - y: 73mm
+- J11: Channel 3 Output Jack 1
+  - x: 21.52mm
+  - y: 73mm
+- J12: Channel 3 Output Jack 2
+  - x: 8.48mm
+  - y: 83mm
+- J13: Channel 3 Output Jack 3
+  - x: 21.52mm
+  - y: 83mm
 
 ---
 
