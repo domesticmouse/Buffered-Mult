@@ -1,0 +1,2840 @@
+(kicad_pcb
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(general
+		(thickness 1.6)
+		(legacy_teardrops no)
+	)
+	(paper "A4")
+	(layers
+		(0 "F.Cu" signal)
+		(2 "B.Cu" signal)
+		(9 "F.Adhes" user "F.Adhesive")
+		(11 "B.Adhes" user "B.Adhesive")
+		(13 "F.Paste" user)
+		(15 "B.Paste" user)
+		(5 "F.SilkS" user "F.Silkscreen")
+		(7 "B.SilkS" user "B.Silkscreen")
+		(1 "F.Mask" user)
+		(3 "B.Mask" user)
+		(17 "Dwgs.User" user "User.Drawings")
+		(19 "Cmts.User" user "User.Comments")
+		(21 "Eco1.User" user "User.Eco1")
+		(23 "Eco2.User" user "User.Eco2")
+		(25 "Edge.Cuts" user)
+		(27 "Margin" user)
+		(31 "F.CrtYd" user "F.Courtyard")
+		(29 "B.CrtYd" user "B.Courtyard")
+		(35 "F.Fab" user)
+		(33 "B.Fab" user)
+		(39 "User.1" user)
+		(41 "User.2" user)
+		(43 "User.3" user)
+		(45 "User.4" user)
+	)
+	(setup
+		(pad_to_mask_clearance 0)
+		(allow_soldermask_bridges_in_footprints no)
+		(tenting
+			(front yes)
+			(back yes)
+		)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(capping no)
+		(filling no)
+		(pcbplotparams
+			(layerselection 0x00000000_00000000_55555555_5755f5ff)
+			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
+			(disableapertmacros no)
+			(usegerberextensions no)
+			(usegerberattributes yes)
+			(usegerberadvancedattributes yes)
+			(creategerberjobfile yes)
+			(dashed_line_dash_ratio 12)
+			(dashed_line_gap_ratio 3)
+			(svgprecision 4)
+			(plotframeref no)
+			(mode 1)
+			(useauxorigin no)
+			(pdf_front_fp_property_popups yes)
+			(pdf_back_fp_property_popups yes)
+			(pdf_metadata yes)
+			(pdf_single_document no)
+			(dxfpolygonmode yes)
+			(dxfimperialunits yes)
+			(dxfusepcbnewfont yes)
+			(psnegative no)
+			(psa4output no)
+			(plot_black_and_white yes)
+			(sketchpadsonfab no)
+			(plotpadnumbers no)
+			(hidednponfab no)
+			(sketchdnponfab yes)
+			(crossoutdnponfab yes)
+			(subtractmaskfromsilk no)
+			(outputformat 1)
+			(mirror no)
+			(drillshape 1)
+			(scaleselection 1)
+			(outputdirectory "")
+		)
+	)
+	(footprint "ModularHoles:3.5mmMonoJackHole_6.4mm_M6_Pad"
+		(locked yes)
+		(layer "F.Cu")
+		(uuid "03b38e77-beb4-4fc9-91d0-d2bb2f3c2855")
+		(at 51.52 54.25)
+		(descr "3.5mm mono Audio jack mounting hole")
+		(tags "mountinghole M6 audiojack")
+		(property "Reference" "H14"
+			(at 0 -5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "4423b664-383e-45a6-9a90-4eae322e43e7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Output Jack J5"
+			(at 0 7.35 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ab1c59fe-0261-40a7-8d76-cd8e0fc712c2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "69ba086b-e35a-4593-a120-0bcb44fbd366")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "80ea3e09-557d-446c-b0b4-f4bd06dab9d4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Unused" "unused"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a1b3c4a8-0ab2-44f8-a67f-52354d3a3c28")
+			(effects
+				(font
+					(size 0.001 0.001)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/e2e7c2c2-dc17-4195-8528-b63c2d0484a8")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.6 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "b0d380ab-b98a-443f-88db-7421f2e56089")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "3ffad37a-5702-4912-9025-ba61e7611fbb")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "d736f382-75ad-4920-9964-c70967c0313e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 6.8 6.8)
+			(drill 6.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "input")
+			(zone_connect 2)
+			(uuid "cf2d82f6-f4b3-4d8c-bf0a-14aed1f76380")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ModularHoles:3.5mmMonoJackHole_6.4mm_M6_Pad"
+		(locked yes)
+		(layer "F.Cu")
+		(uuid "0a8503c7-c3c6-4219-9307-a4f55ff1671d")
+		(at 51.52 64.25)
+		(descr "3.5mm mono Audio jack mounting hole")
+		(tags "mountinghole M6 audiojack")
+		(property "Reference" "H16"
+			(at 0 -5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "f4eed6cb-f1d5-42f8-894d-5959b6241ccb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Output Jack J7"
+			(at 0 7.35 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2bc5a465-4c79-426a-9d7f-450a9524be24")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b0f08f8e-a42e-4e10-bc85-c7e3b0ac37e9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "31334e72-02d8-4388-9dcd-84cfa405c77f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Unused" "unused"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a3c7300e-3097-4de1-b31c-0c1129c58042")
+			(effects
+				(font
+					(size 0.001 0.001)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/295ae2a9-5cf4-4a54-9874-a70c4aea7c00")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.6 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "b8bce9a8-4a97-4a06-8759-4511d4ed24d7")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "325f5e56-4f17-49d9-888a-7f9b56d92425")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "e55c4027-3e46-4161-bd21-63adb8f5c69a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 6.8 6.8)
+			(drill 6.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "input")
+			(zone_connect 2)
+			(uuid "27621a56-ad72-48bc-b5a6-29ca6c573320")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "MountingHole:MountingHole_3.2mm_M3"
+		(layer "F.Cu")
+		(uuid "170ed9b9-2bca-4395-a905-dd464b44653a")
+		(at 35.77 46.25)
+		(descr "Mounting Hole 3.2mm, M3, no annular, generated by kicad-footprint-generator mountinghole.py")
+		(tags "mountinghole M3")
+		(property "Reference" "H3"
+			(at 0 -4.15 0)
+			(layer "F.SilkS")
+			(uuid "efdb7e2b-19b1-4889-a5d6-fab6178f798f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "D1 LED hole"
+			(at 0 4.15 0)
+			(layer "F.Fab")
+			(uuid "48af5fe4-f176-4ad7-96ce-788e9bb56d54")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d532dd45-752d-4395-8130-c588185e542f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c3a0327e-19f7-4639-8132-b56f54391acf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "mounting_hardware/mounting_hole"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "27751891-1c5a-43da-ab9c-92ee2df1ce5f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*")
+		(path "/32508207-9eb9-46d5-aac5-7967e60589b6")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.2 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "7096c351-b11c-4898-b433-c184b11ae8fb")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.45 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "6bae3efe-be91-434e-986b-c7460a558784")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "161ba2a3-6edb-4651-a9f3-885d23d88120")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0)
+			(size 3.2 3.2)
+			(drill 3.2)
+			(layers "*.Cu" "*.Mask")
+			(uuid "fc1e1b3a-5c58-4db4-bc88-467639a4e8cf")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "MountingHole:MountingHole_3.2mm_M3"
+		(layer "F.Cu")
+		(uuid "35e9de09-9443-4d1c-b017-cfaec97bcff9")
+		(at 200.325 107.925)
+		(descr "Mounting Hole 3.2mm, M3, no annular, generated by kicad-footprint-generator mountinghole.py")
+		(tags "mountinghole M3")
+		(property "Reference" "H7"
+			(at 0 -4.15 0)
+			(layer "F.SilkS")
+			(uuid "9dd7190e-27dc-4fd7-bd87-ba937cfd67c8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "D5 LED hole"
+			(at 0 4.15 0)
+			(layer "F.Fab")
+			(uuid "378186ae-57e4-48e6-9e22-c3635aa5bf22")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "991bb2e0-1411-473f-9221-ae61ad7b2868")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d828ba1c-0d42-412f-bf2b-1f79d5525d9c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "mounting_hardware/mounting_hole"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "9c72d12b-9c59-40e6-a9a6-8a029fbc8675")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*")
+		(path "/5bdac43d-47b4-4ce2-be85-2e2c180b6450")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.2 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "fd1c5e0c-1416-4c71-ad6e-1d9eb130dd07")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.45 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "8a7b7f4d-fb66-480c-89db-faaa0d3fbbae")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "c9d1b0e5-8346-4c97-9086-1a80996b4252")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0)
+			(size 3.2 3.2)
+			(drill 3.2)
+			(layers "*.Cu" "*.Mask")
+			(uuid "7a86fe82-35b6-4834-8d19-f50da35451e4")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ModularHoles:3.5mmMonoJackHole_6.4mm_M6_Pad"
+		(locked yes)
+		(layer "F.Cu")
+		(uuid "40713d9b-3f21-4ef9-9e2e-097e58180d27")
+		(at 38.48 112.25)
+		(descr "3.5mm mono Audio jack mounting hole")
+		(tags "mountinghole M6 audiojack")
+		(property "Reference" "H13"
+			(at 0 -5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d08d1448-f5ba-4be4-ae21-f22a1d44b58e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Input Jack J4"
+			(at 0 7.35 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d6ec809f-8283-4230-b68a-b8492469a5f2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1d93f5bf-14db-432e-b5bb-aee6f2030325")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f3e902f2-2e3d-470a-a3c2-cad5b0757a1a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Unused" "unused"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "59b322c2-e623-46eb-b651-1b8823bfafaf")
+			(effects
+				(font
+					(size 0.001 0.001)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/31fb89ac-e38d-4285-941d-34408c6c8a78")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.6 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "6acc474b-427d-4768-b72a-d9236daf422b")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "e08d381e-d25e-4cc5-bf97-f5b3732f4fec")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "9200b95f-f0e7-492d-8cb2-00be669fd228")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 6.8 6.8)
+			(drill 6.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "input")
+			(zone_connect 2)
+			(uuid "b0b0973b-ab65-4ee6-aa80-a24500bedd2e")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ModularHoles:3.5mmMonoJackHole_6.4mm_M6_Pad"
+		(locked yes)
+		(layer "F.Cu")
+		(uuid "6976b602-8ad3-482c-86a0-fb4538d0b48b")
+		(at 38.48 64.25)
+		(descr "3.5mm mono Audio jack mounting hole")
+		(tags "mountinghole M6 audiojack")
+		(property "Reference" "H15"
+			(at 0 -5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "af3ef223-71ab-482c-b86e-fa4eb209fc2c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Output Jack J6"
+			(at 0 7.35 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2a6e760e-0eaa-432f-9de3-7bf94beb8c65")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "eade982b-9965-422e-837e-528be3880905")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a362a337-9abb-4231-a4d9-7cbe28b12b9b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Unused" "unused"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "6d57fe6f-5aa5-40de-b388-8320b6e6e7c0")
+			(effects
+				(font
+					(size 0.001 0.001)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/388a6219-e69d-45b9-b213-464b20063524")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.6 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "a9881dd9-6019-41de-aebc-957a5c579913")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "3586eb57-7f8e-41fb-b292-cf86d4677b61")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "6329961a-300f-4084-b2ff-ec0b0f02d1b7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 6.8 6.8)
+			(drill 6.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "input")
+			(zone_connect 2)
+			(uuid "a5f19261-b0e0-490d-a849-aeb83f02e0b2")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "MountingHole:MountingHole_3.2mm_M3_Pad"
+		(layer "F.Cu")
+		(uuid "89c41a72-feea-4a71-8328-60bb36686e9c")
+		(at 200.325 131.775)
+		(descr "Mounting Hole 3.2mm, M3, generated by kicad-footprint-generator mountinghole.py")
+		(tags "mountinghole M3")
+		(property "Reference" "H10"
+			(at 0 -4.15 0)
+			(layer "F.SilkS")
+			(uuid "0815db2f-6e9d-4f7d-99c2-6244af3ddcd1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Eurorack bottom right mount"
+			(at 0 4.15 0)
+			(layer "F.Fab")
+			(uuid "0de22748-3b4c-48ae-9bab-37656aeb354b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e442eaf5-459a-4dc9-be8e-cf1df99e3872")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "32671cdd-7216-4c4d-9706-32f0b6408e80")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "mounting_hardware/mounting_hole"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "63310d82-d45e-484c-9c4e-83870798edc8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/9d2cebb9-be2f-4170-80dc-cfd9adc90aca")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.2 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "7918f621-f288-42d2-bb21-9b0a8952f6c2")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.45 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "f0afb2dc-9982-477f-aae0-436b753d6f47")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "5bc19384-2522-4a19-9c02-836c15766d0b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 6.4 6.4)
+			(drill 3.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "input")
+			(zone_connect 2)
+			(uuid "bb2aefd9-490a-4f56-a4e9-369ba36aeeee")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ModularHoles:3.5mmMonoJackHole_6.4mm_M6_Pad"
+		(locked yes)
+		(layer "F.Cu")
+		(uuid "8ba7b1c1-69e9-4277-9f4b-0c90a81dcacf")
+		(at 51.52 83.25)
+		(descr "3.5mm mono Audio jack mounting hole")
+		(tags "mountinghole M6 audiojack")
+		(property "Reference" "H17"
+			(at 0 -5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "6c6100fa-72bc-4548-b45b-8c164f1c9975")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Output Jack J8"
+			(at 0 7.35 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "18f8ba75-40df-4791-a351-d721fd3c1dcf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "91a05743-f948-4888-ba4f-455cf3eab1d0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8b06bb84-013b-4299-8c98-9f73c5de4ac9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Unused" "unused"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "297dbda6-9bc6-4266-8241-a3db8879b011")
+			(effects
+				(font
+					(size 0.001 0.001)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/7fb811ed-03e8-48e6-b40d-96b8319aa138")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.6 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "77ffccc9-d588-48e3-bd04-a91758b477ca")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "53004ef5-b60a-43a3-8fa1-5175fa6d48d1")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "d904f234-0a2a-4f6d-81d6-73057e3e9fbb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 6.8 6.8)
+			(drill 6.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "input")
+			(zone_connect 2)
+			(uuid "b62a126d-1ab9-465b-8d96-c1eb23e0af40")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "MountingHole:MountingHole_3.2mm_M3_Pad"
+		(layer "F.Cu")
+		(uuid "8fdaff86-9216-4192-a4d6-64bda6137bb6")
+		(at 200.325 123.825)
+		(descr "Mounting Hole 3.2mm, M3, generated by kicad-footprint-generator mountinghole.py")
+		(tags "mountinghole M3")
+		(property "Reference" "H9"
+			(at 0 -4.15 0)
+			(layer "F.SilkS")
+			(uuid "9d38a0ff-0dbd-42e6-a0de-046cad7b20b7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Eurorack top right mount"
+			(at 0 4.15 0)
+			(layer "F.Fab")
+			(uuid "01a6fa45-dc25-4a65-b5b0-8974c67fe575")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "28e424cc-7f69-4e3e-a0c7-2d44ee0b08aa")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a5fe30aa-a8f3-45bc-9293-9261e50931a7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "mounting_hardware/mounting_hole"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "44685954-ace1-4deb-aa56-f332b3864175")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/629644de-9e0a-43f9-b210-dbe700fac235")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.2 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "de7e560f-0d89-4f8d-b3dd-37bd4b137a0c")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.45 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "e7af16ef-7727-4bab-b0a8-13a68b68d815")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "92c47cde-05d2-440c-92a0-0873547993bc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 6.4 6.4)
+			(drill 3.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "input")
+			(zone_connect 2)
+			(uuid "d682432e-9ec6-4210-8375-14a1bfc14a5d")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ModularHoles:3.5mmMonoJackHole_6.4mm_M6_Pad"
+		(locked yes)
+		(layer "F.Cu")
+		(uuid "ad2ed525-b698-41bc-908b-0c174a34b95d")
+		(at 38.48 83.25)
+		(descr "3.5mm mono Audio jack mounting hole")
+		(tags "mountinghole M6 audiojack")
+		(property "Reference" "H12"
+			(at 0 -5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "24ff4678-ac92-44e9-ac65-82e4953fbbd9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Input Jack J3"
+			(at 0 7.35 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4f32f59a-41a3-4930-91c0-bd82b9d91464")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8fceb513-5239-43b4-a3b0-8bdfa58a8c4d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3481dfdf-5f8c-42bf-834b-18fe90a41acb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Unused" "unused"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "4a745604-a86c-4b17-88ed-bce5e9829ce0")
+			(effects
+				(font
+					(size 0.001 0.001)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/4c5216e9-1543-44e3-8e2e-44bbe4772086")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.6 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "6200f0e9-668f-4a3b-aaa9-3cc83c8f826f")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "a22c57bd-b2c9-4f01-981e-fd1a1ebb318d")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "5c379ec5-e64b-4c25-b0ff-35db938dc4cd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 6.8 6.8)
+			(drill 6.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "input")
+			(zone_connect 2)
+			(uuid "97e33be7-3f9e-4675-b447-96410cdb6ae0")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ModularHoles:3.5mmMonoJackHole_6.4mm_M6_Pad"
+		(locked yes)
+		(layer "F.Cu")
+		(uuid "ae897077-5265-441c-b575-5f58c3a11503")
+		(at 38.48 93.25)
+		(descr "3.5mm mono Audio jack mounting hole")
+		(tags "mountinghole M6 audiojack")
+		(property "Reference" "H18"
+			(at 0 -5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "c4656390-637c-4ec6-ad01-8da461e3b669")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Output Jack J9"
+			(at 0 7.35 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ed7f5e5e-ad63-4132-8ccc-84fa422df18e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5b9e7b05-16dc-4ab4-9d45-c0160e96023e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2c22766a-6a62-42c3-8075-03093954d120")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Unused" "unused"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "cc430718-5b21-4519-8f11-2472c0f3e287")
+			(effects
+				(font
+					(size 0.001 0.001)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/35d94dd1-ca7a-4e95-a0f1-bee31bcde6a4")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.6 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "440e20eb-4d42-4a7a-82c8-8d9e069e10fc")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "834d9289-8cb8-496e-ae3d-a00df9d46a0e")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "ac2da2c7-8092-4ae0-8e81-e082a900ec21")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 6.8 6.8)
+			(drill 6.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "input")
+			(zone_connect 2)
+			(uuid "e298a871-cfb1-46ca-98c4-b95b44b98cc1")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ModularHoles:3.5mmMonoJackHole_6.4mm_M6_Pad"
+		(locked yes)
+		(layer "F.Cu")
+		(uuid "b1f1acd1-f084-433b-8633-8635404e99de")
+		(at 51.52 93.25)
+		(descr "3.5mm mono Audio jack mounting hole")
+		(tags "mountinghole M6 audiojack")
+		(property "Reference" "H19"
+			(at 0 -5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "9cf2c71c-b0d3-4ef4-9fe6-9132f09754b4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Output Jack J10"
+			(at 0 7.35 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4d70015e-29af-4d35-9aa7-7abcde1a4344")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "82baea39-590f-4cf5-8c27-d761ad288e8f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "714054b1-2b8a-4405-81cb-d5987b26f473")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Unused" "unused"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "5abab750-9353-4484-87ee-9372e6948545")
+			(effects
+				(font
+					(size 0.001 0.001)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/597948f8-71e4-458e-b078-72a2d555400e")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.6 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "80b97bc0-2caf-4021-ba82-b19d4f9fb010")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "b8f1ac85-2e3a-4adf-96ca-bf60a4cb4caf")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "89887a00-9ffe-4a93-9417-6bd347be9551")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 6.8 6.8)
+			(drill 6.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "input")
+			(zone_connect 2)
+			(uuid "7bb42726-850e-4ef5-97e0-93fdffc0b1c2")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ModularHoles:3.5mmMonoJackHole_6.4mm_M6_Pad"
+		(locked yes)
+		(layer "F.Cu")
+		(uuid "b7b9e3c8-33b0-401e-a088-fd7a0c3397ba")
+		(at 38.48 54.25)
+		(descr "3.5mm mono Audio jack mounting hole")
+		(tags "mountinghole M6 audiojack")
+		(property "Reference" "H11"
+			(at 0 -5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d0967eed-d96b-4645-93bf-7212b5c16c34")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Input Jack J2"
+			(at 0 7.35 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5e0aaf1d-311a-423a-b452-8af1e4f4143b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8df7f3e0-56fa-4293-ad1c-076159844878")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6c61b9aa-90a0-45f7-92ff-4ff32fbd0137")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Unused" "unused"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "6424f991-ff08-4f57-aa22-83f4fee851b8")
+			(effects
+				(font
+					(size 0.001 0.001)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/29d5191d-4f22-4447-91a7-a635571b1faf")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.6 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "258b8a62-211a-4c55-b286-ab5e3a601fae")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "e877b2a4-4fc3-4462-aae9-712b58f3e73c")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "398999f0-7fa9-45ef-9038-34a2e5f26db1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 6.8 6.8)
+			(drill 6.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "input")
+			(zone_connect 2)
+			(uuid "fdb53ac6-3f46-46f9-b08e-c6e25d11fabf")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "MountingHole:MountingHole_3.2mm_M3"
+		(layer "F.Cu")
+		(uuid "b8005d7a-5978-423d-a324-01726c914496")
+		(at 35.77 75.25)
+		(descr "Mounting Hole 3.2mm, M3, no annular, generated by kicad-footprint-generator mountinghole.py")
+		(tags "mountinghole M3")
+		(property "Reference" "H5"
+			(at 0 -4.15 0)
+			(layer "F.SilkS")
+			(uuid "98dc4d7c-2644-4b4c-becd-04ce2b58e99f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "D3 LED hole"
+			(at 0 4.15 0)
+			(layer "F.Fab")
+			(uuid "0ace527b-0bb4-4c85-80e6-7dea40e46baf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "51272447-47b9-4148-bde6-85af2afc564b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "30c47ac0-cb7d-4ad0-8a0a-c1aa40cf29ed")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "mounting_hardware/mounting_hole"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "1ceef99c-41bb-42a8-85b7-fea57470e942")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*")
+		(path "/e4d938d4-b4b8-44dc-acbd-c3c109d45d82")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.2 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "ffe7eaac-cfbb-45fe-a72c-951e7645811a")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.45 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "b0cb1d86-3c10-40f8-b413-6437d5e40915")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "d6a89614-d2a2-48d9-8e01-502579d9a1ba")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0)
+			(size 3.2 3.2)
+			(drill 3.2)
+			(layers "*.Cu" "*.Mask")
+			(uuid "24ad4ace-6d11-4437-acc1-066c79784796")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ModularHoles:3.5mmMonoJackHole_6.4mm_M6_Pad"
+		(locked yes)
+		(layer "F.Cu")
+		(uuid "bffc5e98-fe4e-41af-9d76-bec45c686112")
+		(at 38.48 122.25)
+		(descr "3.5mm mono Audio jack mounting hole")
+		(tags "mountinghole M6 audiojack")
+		(property "Reference" "H21"
+			(at 0 -5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "abc2bfbd-e680-45db-9787-2816b4aa8423")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Output Jack J12"
+			(at 0 7.35 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ceeb04b9-755a-474d-a81c-806f026be4c2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7c62584c-204e-446c-99a3-5bf62fb5686b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c677b40b-ce81-4cf4-80ef-26806f52ba8e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Unused" "unused"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "fb04581e-5612-4a62-b655-1d39b38b4ec2")
+			(effects
+				(font
+					(size 0.001 0.001)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/bc793fc5-5004-4d94-9b42-85f0c33a7116")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.6 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "3c66dcfe-60f1-425b-bbd2-15fbf6baaf59")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "55c62066-ed9e-423a-8cd6-56da286ec232")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "fd81209c-5088-48a2-a5ef-069c2acdf2ad")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 6.8 6.8)
+			(drill 6.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "input")
+			(zone_connect 2)
+			(uuid "a35d0295-d0ff-41cf-ac4c-4610d0ca8adf")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "MountingHole:MountingHole_3.2mm_M3"
+		(layer "F.Cu")
+		(uuid "c3309dc1-ac98-4ae9-b286-2a7f7aebfb0c")
+		(at 200.325 115.875)
+		(descr "Mounting Hole 3.2mm, M3, no annular, generated by kicad-footprint-generator mountinghole.py")
+		(tags "mountinghole M3")
+		(property "Reference" "H8"
+			(at 0 -4.15 0)
+			(layer "F.SilkS")
+			(uuid "13d84469-6514-4043-b939-2da58abf9547")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "D6 LED hole"
+			(at 0 4.15 0)
+			(layer "F.Fab")
+			(uuid "0de9c675-ee31-4c0c-8c04-c20a83243b57")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f3cdc916-af38-4ca4-9161-7aeed450eb03")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c72ebfec-5760-41ad-91a0-58a94003470d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "mounting_hardware/mounting_hole"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "e0d4a3d5-ae7f-4bed-8044-7d934b3a5e7e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*")
+		(path "/48058e8d-f167-4cf1-b91e-29a544aafc02")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.2 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "51435c30-b6e6-4808-b66f-ebcc0ae48083")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.45 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "97ad413c-095d-40d1-acb6-5ecc1ee84cdd")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "335d1773-3ef1-4622-bc57-a08d0f55336a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0)
+			(size 3.2 3.2)
+			(drill 3.2)
+			(layers "*.Cu" "*.Mask")
+			(uuid "fe798a9e-ea5d-4c16-8d3f-bcf5f557ab31")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "MountingHole:MountingHole_3.2mm_M3_Pad"
+		(layer "F.Cu")
+		(uuid "d07b7865-07a2-4238-84cd-b3ac1df3e75b")
+		(at 192.375 99.975)
+		(descr "Mounting Hole 3.2mm, M3, generated by kicad-footprint-generator mountinghole.py")
+		(tags "mountinghole M3")
+		(property "Reference" "H1"
+			(at 0 -4.15 0)
+			(layer "F.SilkS")
+			(uuid "77ca5c43-fbb3-4609-bf98-165437d6e1dc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Eurorack top left mount"
+			(at 0 4.15 0)
+			(layer "F.Fab")
+			(uuid "468ec1e7-8580-49ce-b696-1ef97efc9763")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2cd84134-f991-460e-9161-3472aa0eb228")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e78f1ad3-8d5d-41b4-bbcf-165f3d400610")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "mounting_hardware/mounting_hole"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "16931b5d-16dc-4f3c-af18-78da1d68b9fa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/13c85e57-09d9-44b2-bc22-3d06f4f788fd")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.2 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "17f802ee-7c70-45fa-96ad-6884164ce95e")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.45 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "9f9d4d68-e095-4c60-990a-bc77ef8789e8")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "d175c971-d347-4be3-8516-534c521dd57b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 6.4 6.4)
+			(drill 3.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "input")
+			(zone_connect 2)
+			(uuid "3ccc5ff7-10d8-43cb-9469-6bf573f8ab3e")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ModularHoles:3.5mmMonoJackHole_6.4mm_M6_Pad"
+		(locked yes)
+		(layer "F.Cu")
+		(uuid "d1667698-af01-4783-b5ca-70d7573b7c6f")
+		(at 51.52 122.25)
+		(descr "3.5mm mono Audio jack mounting hole")
+		(tags "mountinghole M6 audiojack")
+		(property "Reference" "H22"
+			(at 0 -5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "8280a86f-5c8e-40da-9b80-7fef8efe99ee")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Output Jack J13"
+			(at 0 7.35 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4b50a6da-39ec-4fcb-bec9-bb834153ec6e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6483331f-9637-4b7c-896c-c2587720cea4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fe8315b5-7ed3-4e01-ba54-38f13634e3f0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Unused" "unused"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "66a0ead4-6078-4838-b576-d6024a52261a")
+			(effects
+				(font
+					(size 0.001 0.001)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/03f3fe80-8311-4652-adc5-7618e2c1bd8e")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.6 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "672de9dd-facb-4076-8aac-ce354731e3c6")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "300477c0-fd9b-49fc-9595-4f1d5075fbac")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "bb5fdb00-1418-4386-afc0-5dd5877bc03a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 6.8 6.8)
+			(drill 6.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "input")
+			(zone_connect 2)
+			(uuid "e5fa70d4-ab3f-4524-915e-9ba0e4629f61")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "MountingHole:MountingHole_3.2mm_M3"
+		(layer "F.Cu")
+		(uuid "da312e00-2329-4190-8507-b953e009256f")
+		(at 41.27 75.25)
+		(descr "Mounting Hole 3.2mm, M3, no annular, generated by kicad-footprint-generator mountinghole.py")
+		(tags "mountinghole M3")
+		(property "Reference" "H6"
+			(at 0 -4.15 0)
+			(layer "F.SilkS")
+			(uuid "a3ec4f4a-630d-4de3-a3a1-a5c77296e377")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "D4 LED hole"
+			(at 0 4.15 0)
+			(layer "F.Fab")
+			(uuid "21bb4212-c04f-4ba8-8d90-4e84cabf8c88")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f3a9cf3f-6b5f-4193-b4ce-9fb40b97067a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6de62664-ff49-43c8-8513-c2f893ea7b55")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "mounting_hardware/mounting_hole"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "fced3252-f499-4de4-b700-e6ba335ceac0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*")
+		(path "/c816b729-fe15-429c-8a38-9abc272a1f0d")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.2 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "b46cac1c-b8ee-42c7-9e8e-1b5a6ab7fa9e")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.45 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "70276504-3d93-4c51-b542-5f1052642538")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "720dd90a-c12a-40e7-aa8d-f34f7144cf55")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0)
+			(size 3.2 3.2)
+			(drill 3.2)
+			(layers "*.Cu" "*.Mask")
+			(uuid "2d00ad24-522a-4c3e-81c5-af83a417aa67")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "MountingHole:MountingHole_3.2mm_M3_Pad"
+		(layer "F.Cu")
+		(uuid "daf3aede-e793-48cd-8cb1-d8445568db77")
+		(at 192.375 107.925)
+		(descr "Mounting Hole 3.2mm, M3, generated by kicad-footprint-generator mountinghole.py")
+		(tags "mountinghole M3")
+		(property "Reference" "H2"
+			(at 0 -4.15 0)
+			(layer "F.SilkS")
+			(uuid "dd18a575-a987-4a42-b7c3-d95dbee33277")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Eurorack bottom left mount"
+			(at 0 4.15 0)
+			(layer "F.Fab")
+			(uuid "25a6b5bc-9fa5-498e-9b3a-ae1293acf280")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "63ea7662-64db-4e4a-b997-07102f95a531")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "002677bd-f1c9-475d-a6c4-e0cf038cc481")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "mounting_hardware/mounting_hole"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "f57b84e0-de54-4d53-98d8-7284ff78ba77")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/4643af47-3657-4454-92cc-414babc2e7ef")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.2 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "15802d2b-ca58-4759-833e-e0f31206a016")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.45 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "4ba9ff2e-0ac4-45fc-8e69-c06d272d82bd")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "a8ffb512-7f16-4e33-a432-db1d963e0000")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 6.4 6.4)
+			(drill 3.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "input")
+			(zone_connect 2)
+			(uuid "eb16c43f-3557-44bc-b647-6a2706abf531")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "MountingHole:MountingHole_3.2mm_M3"
+		(layer "F.Cu")
+		(uuid "f711c38a-625d-412f-a134-94145773661c")
+		(at 41.27 46.25)
+		(descr "Mounting Hole 3.2mm, M3, no annular, generated by kicad-footprint-generator mountinghole.py")
+		(tags "mountinghole M3")
+		(property "Reference" "H4"
+			(at 0 -4.15 0)
+			(layer "F.SilkS")
+			(uuid "c684c6bb-498a-4c85-8821-03e2fb31b198")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "D2 LED hole"
+			(at 0 4.15 0)
+			(layer "F.Fab")
+			(uuid "924aaeda-4ceb-4b33-ae33-5d977710b304")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "893abeb8-490b-40e9-8704-efd65f903cfc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4d6a7c7e-a388-4a3d-af11-1682aee07aa8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "mounting_hardware/mounting_hole"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "3b116ea3-d2ca-47d4-9d55-cb73c15572ea")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*")
+		(path "/ca15f471-1e6f-4077-80f9-bbd9b5b4d39b")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.2 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "7eff5e91-8462-4710-8f2c-4a302a66749f")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.45 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "e0293b47-8859-48ec-8f22-abeabea2bdc3")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "63090b6b-5dff-48e6-a5ad-0c1fbe2505a2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0)
+			(size 3.2 3.2)
+			(drill 3.2)
+			(layers "*.Cu" "*.Mask")
+			(uuid "47a2bedf-0c4d-4046-9649-a3eda8c920eb")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ModularHoles:3.5mmMonoJackHole_6.4mm_M6_Pad"
+		(locked yes)
+		(layer "F.Cu")
+		(uuid "f7c0bcd3-fb5c-42e1-a0ca-de9ea16bf712")
+		(at 51.52 112.25)
+		(descr "3.5mm mono Audio jack mounting hole")
+		(tags "mountinghole M6 audiojack")
+		(property "Reference" "H20"
+			(at 0 -5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "7c6f0350-cd97-4612-9e3f-7dde781192bd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Output Jack J11"
+			(at 0 7.35 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "24852cb0-05df-45bd-a076-b271f304ec4d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "431dafe5-6512-4bb5-b5f5-460f92983d0b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9779a7f0-9340-4b6d-93d0-338df96cea09")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Unused" "unused"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "9f1c5668-4ce2-4189-9a77-2ac935f44e41")
+			(effects
+				(font
+					(size 0.001 0.001)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*Pad*")
+		(path "/30dbebe6-7709-48a2-8d99-9d3ff57825c2")
+		(sheetname "/")
+		(sheetfile "Faceplate.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 3.6 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "8b98b072-0e7d-4b17-988e-21266bc856e4")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 3.7 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "419fa4d2-72e6-4fff-83fa-7279df6febc8")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "775a4c14-af40-407c-8788-08bb6f49fd01")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 6.8 6.8)
+			(drill 6.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "input")
+			(zone_connect 2)
+			(uuid "b5ae6202-575b-4a12-b7e6-32a7aa80669f")
+		)
+		(embedded_fonts no)
+	)
+	(gr_circle
+		(center 38.48 54.25)
+		(end 42.98 54.25)
+		(stroke
+			(width 2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "674c6389-6a45-4ab0-91d6-664df48d7a55")
+	)
+	(gr_circle
+		(center 38.48 83.25)
+		(end 42.98 83.25)
+		(stroke
+			(width 2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "f106211c-ba77-44c1-8f8d-a1bb3b339c28")
+	)
+	(gr_circle
+		(center 38.48 112.25)
+		(end 42.98 112.25)
+		(stroke
+			(width 2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "c5fcfaf0-e3a2-4976-a8bb-ad3b89d56b74")
+	)
+	(gr_rect
+		(start 30 39.25)
+		(end 60 149.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "Dwgs.User")
+		(uuid "6785a5e5-ed5d-4d20-9ec4-8fbefd8e3d1b")
+	)
+	(gr_rect
+		(start 30 30)
+		(end 60 158.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "Edge.Cuts")
+		(uuid "1495147a-67e6-4905-9b6f-fd9e20f199ef")
+	)
+	(zone
+		(net "GND")
+		(layers "F.Cu" "B.Cu")
+		(uuid "5880da8c-84a8-45a6-aa93-62566cca7d29")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0.5)
+		)
+		(min_thickness 0.25)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 0)
+		)
+		(polygon
+			(pts
+				(xy 29 29) (xy 61 29) (xy 61 159) (xy 29 159)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 59.442539 30.520185) (xy 59.488294 30.572989) (xy 59.4995 30.6245) (xy 59.4995 157.8755) (xy 59.479815 157.942539)
+				(xy 59.427011 157.988294) (xy 59.3755 157.9995) (xy 30.6245 157.9995) (xy 30.557461 157.979815)
+				(xy 30.511706 157.927011) (xy 30.5005 157.8755) (xy 30.5005 30.6245) (xy 30.520185 30.557461) (xy 30.572989 30.511706)
+				(xy 30.6245 30.5005) (xy 59.3755 30.5005)
+			)
+		)
+		(filled_polygon
+			(layer "B.Cu")
+			(pts
+				(xy 59.442539 30.520185) (xy 59.488294 30.572989) (xy 59.4995 30.6245) (xy 59.4995 157.8755) (xy 59.479815 157.942539)
+				(xy 59.427011 157.988294) (xy 59.3755 157.9995) (xy 30.6245 157.9995) (xy 30.557461 157.979815)
+				(xy 30.511706 157.927011) (xy 30.5005 157.8755) (xy 30.5005 30.6245) (xy 30.520185 30.557461) (xy 30.572989 30.511706)
+				(xy 30.6245 30.5005) (xy 59.3755 30.5005)
+			)
+		)
+	)
+	(embedded_fonts no)
+)
