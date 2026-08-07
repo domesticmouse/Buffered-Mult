@@ -950,7 +950,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+		(property "Footprint" "ModularHoles:Eurorack_Mounting_Slot_M3_Earthed"
 			(at 43.18 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -1658,7 +1658,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+		(property "Footprint" "ModularHoles:Eurorack_Mounting_Slot_M3_Earthed"
 			(at 43.18 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -2047,7 +2047,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+		(property "Footprint" "ModularHoles:Eurorack_Mounting_Slot_M3_Earthed"
 			(at 82.55 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -2284,7 +2284,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+		(property "Footprint" "ModularHoles:Eurorack_Mounting_Slot_M3_Earthed"
 			(at 82.55 92.71 0)
 			(hide yes)
 			(show_name no)
