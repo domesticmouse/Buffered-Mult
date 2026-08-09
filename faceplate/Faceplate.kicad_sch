@@ -1424,7 +1424,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+		(property "Footprint" "ModularHoles:LED_3.2mm_M3"
 			(at 40.64 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -1737,7 +1737,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+		(property "Footprint" "ModularHoles:LED_3.2mm_M3"
 			(at 40.5966 68.3641 0)
 			(hide yes)
 			(show_name no)
@@ -1971,7 +1971,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+		(property "Footprint" "ModularHoles:LED_3.2mm_M3"
 			(at 40.64 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -2521,7 +2521,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+		(property "Footprint" "ModularHoles:LED_3.2mm_M3"
 			(at 40.64 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -2597,7 +2597,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+		(property "Footprint" "ModularHoles:LED_3.2mm_M3"
 			(at 40.64 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -2752,7 +2752,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+		(property "Footprint" "ModularHoles:LED_3.2mm_M3"
 			(at 40.64 46.99 0)
 			(hide yes)
 			(show_name no)

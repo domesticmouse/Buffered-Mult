@@ -1,0 +1,23 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+H1,Eurorack top left mount,Eurorack_Mounting_Slot_M3_Earthed,37.5,-33.0,0.0,top
+H10,Eurorack bottom right mount,Eurorack_Mounting_Slot_M3_Earthed,52.5,-155.5,0.0,top
+H11,Input Jack J2,3.5mmMonoJackHole_6.4mm_M6_Pad,38.48,-54.25,0.0,top
+H12,Input Jack J3,3.5mmMonoJackHole_6.4mm_M6_Pad,38.48,-83.25,0.0,top
+H13,Input Jack J4,3.5mmMonoJackHole_6.4mm_M6_Pad,38.48,-112.25,0.0,top
+H14,Output Jack J5,3.5mmMonoJackHole_6.4mm_M6_Pad,51.52,-54.25,0.0,top
+H15,Output Jack J6,3.5mmMonoJackHole_6.4mm_M6_Pad,38.48,-64.25,0.0,top
+H16,Output Jack J7,3.5mmMonoJackHole_6.4mm_M6_Pad,51.52,-64.25,0.0,top
+H17,Output Jack J8,3.5mmMonoJackHole_6.4mm_M6_Pad,51.52,-83.25,0.0,top
+H18,Output Jack J9,3.5mmMonoJackHole_6.4mm_M6_Pad,38.48,-93.25,0.0,top
+H19,Output Jack J10,3.5mmMonoJackHole_6.4mm_M6_Pad,51.52,-93.25,0.0,top
+H2,Eurorack bottom left mount,Eurorack_Mounting_Slot_M3_Earthed,37.5,-155.5,0.0,top
+H20,Output Jack J11,3.5mmMonoJackHole_6.4mm_M6_Pad,51.52,-112.25,0.0,top
+H21,Output Jack J12,3.5mmMonoJackHole_6.4mm_M6_Pad,38.48,-122.25,0.0,top
+H22,Output Jack J13,3.5mmMonoJackHole_6.4mm_M6_Pad,51.52,-122.25,0.0,top
+H3,D1 LED hole,LED_3.2mm_M3,35.77,-46.25,0.0,top
+H4,D2 LED hole,LED_3.2mm_M3,41.27,-46.25,0.0,top
+H5,D3 LED hole,LED_3.2mm_M3,35.77,-75.25,0.0,top
+H6,D4 LED hole,LED_3.2mm_M3,41.27,-75.25,0.0,top
+H7,D5 LED hole,LED_3.2mm_M3,35.77,-104.25,0.0,top
+H8,D6 LED hole,LED_3.2mm_M3,41.27,-104.25,0.0,top
+H9,Eurorack top right mount,Eurorack_Mounting_Slot_M3_Earthed,52.5,-33.0,0.0,top
