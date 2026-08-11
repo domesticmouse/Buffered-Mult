@@ -50,6 +50,8 @@ The panel accommodates **3 identical channel groups** (Channel 1, Channel 2, Cha
 
 Faceplate to Control Panel offset = (128.5 - 110)/2 = 9.25mm
 
+Distance between channel groups, 29mm vertical separation.
+
 Measurements from top left of control board.
 
 #### Channel 1
