@@ -1,7 +1,7 @@
 # KiCad Schematic Design Report: Buffered-Mult.kicad_sch
 
-- **Date:** 2026-07-31T21:14:42
-- **KiCad Tool Version:** Eeschema 10.0.4
+- **Date:** 2026-08-10T19:59:02
+- **KiCad Tool Version:** Eeschema 10.0.1
 - **Design Source:** Buffered-Mult.kicad_sch
 
 ## Component Catalog
@@ -9,218 +9,305 @@
 - **C1**
   - **Value:** `100nF`
   - **Library Part:** `Device:C`
+  - **Footprint:** `Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder`
   - **Description:** Unpolarized capacitor
+  - **LCSC:** `C14663`
 - **C2**
   - **Value:** `100nF`
   - **Library Part:** `Device:C`
+  - **Footprint:** `Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder`
   - **Description:** Unpolarized capacitor
+  - **LCSC:** `C14663`
 - **C3**
   - **Value:** `100nF`
   - **Library Part:** `Device:C`
+  - **Footprint:** `Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder`
   - **Description:** Unpolarized capacitor
+  - **LCSC:** `C14663`
 - **C4**
   - **Value:** `100nF`
   - **Library Part:** `Device:C`
+  - **Footprint:** `Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder`
   - **Description:** Unpolarized capacitor
+  - **LCSC:** `C14663`
 - **C5**
   - **Value:** `100nF`
   - **Library Part:** `Device:C`
+  - **Footprint:** `Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder`
   - **Description:** Unpolarized capacitor
+  - **LCSC:** `C14663`
 - **C6**
   - **Value:** `100nF`
   - **Library Part:** `Device:C`
+  - **Footprint:** `Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder`
   - **Description:** Unpolarized capacitor
+  - **LCSC:** `C14663`
 - **C7**
   - **Value:** `10uF/25V`
   - **Library Part:** `Device:C_Polarized`
+  - **Footprint:** `Capacitor_SMD:CP_Elec_5x5.4`
   - **Description:** Polarized capacitor
+  - **LCSC:** `C46550416`
 - **C8**
   - **Value:** `10uF/25V`
   - **Library Part:** `Device:C_Polarized`
+  - **Footprint:** `Capacitor_SMD:CP_Elec_5x5.4`
   - **Description:** Polarized capacitor
+  - **LCSC:** `C46550416`
 - **C9**
   - **Value:** `100pF`
   - **Library Part:** `Device:C`
+  - **Footprint:** `Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder`
   - **Description:** Unpolarized capacitor
+  - **LCSC:** `C14858`
 - **C10**
   - **Value:** `100pF`
   - **Library Part:** `Device:C`
+  - **Footprint:** `Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder`
   - **Description:** Unpolarized capacitor
+  - **LCSC:** `C14858`
 - **C11**
   - **Value:** `100pF`
   - **Library Part:** `Device:C`
+  - **Footprint:** `Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder`
   - **Description:** Unpolarized capacitor
+  - **LCSC:** `C14858`
 - **D1**
   - **Value:** `LED`
   - **Library Part:** `Device:LED`
+  - **Footprint:** `LED_THT:LED_D3.0mm_FlatTop`
   - **Description:** Light emitting diode
 - **D2**
   - **Value:** `LED`
   - **Library Part:** `Device:LED`
+  - **Footprint:** `LED_THT:LED_D3.0mm_FlatTop`
   - **Description:** Light emitting diode
 - **D3**
   - **Value:** `LED`
   - **Library Part:** `Device:LED`
+  - **Footprint:** `LED_THT:LED_D3.0mm_FlatTop`
   - **Description:** Light emitting diode
 - **D4**
   - **Value:** `LED`
   - **Library Part:** `Device:LED`
+  - **Footprint:** `LED_THT:LED_D3.0mm_FlatTop`
   - **Description:** Light emitting diode
 - **D5**
   - **Value:** `LED`
   - **Library Part:** `Device:LED`
+  - **Footprint:** `LED_THT:LED_D3.0mm_FlatTop`
   - **Description:** Light emitting diode
 - **D6**
   - **Value:** `LED`
   - **Library Part:** `Device:LED`
+  - **Footprint:** `LED_THT:LED_D3.0mm_FlatTop`
   - **Description:** Light emitting diode
 - **D7**
   - **Value:** `D_Schottky`
   - **Library Part:** `Device:D_Schottky`
+  - **Footprint:** `Diode_SMD:D_SMA_Handsoldering`
   - **Description:** Schottky diode
+  - **LCSC:** `C2480`
 - **D8**
   - **Value:** `D_Schottky`
   - **Library Part:** `Device:D_Schottky`
+  - **Footprint:** `Diode_SMD:D_SMA_Handsoldering`
   - **Description:** Schottky diode
+  - **LCSC:** `C2480`
 - **J1**
   - **Value:** `Eurorack PWR`
   - **Library Part:** `Connector_Generic:Conn_02x05_Odd_Even`
+  - **Footprint:** `Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical`
   - **Description:** Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)
 - **J2**
   - **Value:** `INPUT1`
   - **Library Part:** `Connector_Audio:AudioJack2_SwitchT`
+  - **Footprint:** `Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles`
   - **Description:** Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)
 - **J3**
   - **Value:** `INPUT2`
   - **Library Part:** `Connector_Audio:AudioJack2_SwitchT`
+  - **Footprint:** `Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles`
   - **Description:** Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)
 - **J4**
   - **Value:** `INPUT3`
   - **Library Part:** `Connector_Audio:AudioJack2_SwitchT`
+  - **Footprint:** `Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles`
   - **Description:** Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)
 - **J5**
   - **Value:** `OUTPUT1-1`
   - **Library Part:** `Connector_Audio:AudioJack2_SwitchT`
+  - **Footprint:** `Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles`
   - **Description:** Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)
 - **J6**
   - **Value:** `OUTPUT1-2`
   - **Library Part:** `Connector_Audio:AudioJack2_SwitchT`
+  - **Footprint:** `Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles`
   - **Description:** Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)
 - **J7**
   - **Value:** `OUTPUT1-3`
   - **Library Part:** `Connector_Audio:AudioJack2_SwitchT`
+  - **Footprint:** `Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles`
   - **Description:** Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)
 - **J8**
   - **Value:** `OUTPUT2-1`
   - **Library Part:** `Connector_Audio:AudioJack2_SwitchT`
+  - **Footprint:** `Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles`
   - **Description:** Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)
 - **J9**
   - **Value:** `OUTPUT2-2`
   - **Library Part:** `Connector_Audio:AudioJack2_SwitchT`
+  - **Footprint:** `Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles`
   - **Description:** Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)
 - **J10**
   - **Value:** `OUTPUT2-3`
   - **Library Part:** `Connector_Audio:AudioJack2_SwitchT`
+  - **Footprint:** `Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles`
   - **Description:** Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)
 - **J11**
   - **Value:** `OUTPUT3-1`
   - **Library Part:** `Connector_Audio:AudioJack2_SwitchT`
+  - **Footprint:** `Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles`
   - **Description:** Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)
 - **J12**
   - **Value:** `OUTPUT3-2`
   - **Library Part:** `Connector_Audio:AudioJack2_SwitchT`
+  - **Footprint:** `Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles`
   - **Description:** Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)
 - **J13**
   - **Value:** `OUTPUT3-3`
   - **Library Part:** `Connector_Audio:AudioJack2_SwitchT`
+  - **Footprint:** `Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles`
   - **Description:** Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)
 - **R1**
   - **Value:** `100K`
   - **Library Part:** `Device:R`
+  - **Footprint:** `Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder`
   - **Description:** Resistor
+  - **LCSC:** `C25803`
 - **R2**
   - **Value:** `100K`
   - **Library Part:** `Device:R`
+  - **Footprint:** `Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder`
   - **Description:** Resistor
+  - **LCSC:** `C25803`
 - **R3**
   - **Value:** `100K`
   - **Library Part:** `Device:R`
+  - **Footprint:** `Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder`
   - **Description:** Resistor
+  - **LCSC:** `C25803`
 - **R4**
   - **Value:** `1k`
   - **Library Part:** `Device:R`
+  - **Footprint:** `Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder`
   - **Description:** Resistor
+  - **LCSC:** `C21190`
 - **R5**
   - **Value:** `1k`
   - **Library Part:** `Device:R`
+  - **Footprint:** `Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder`
   - **Description:** Resistor
+  - **LCSC:** `C21190`
 - **R6**
   - **Value:** `1k`
   - **Library Part:** `Device:R`
+  - **Footprint:** `Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder`
   - **Description:** Resistor
+  - **LCSC:** `C21190`
 - **R7**
   - **Value:** `1k`
   - **Library Part:** `Device:R`
+  - **Footprint:** `Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder`
   - **Description:** Resistor
+  - **LCSC:** `C21190`
 - **R8**
   - **Value:** `1k`
   - **Library Part:** `Device:R`
+  - **Footprint:** `Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder`
   - **Description:** Resistor
+  - **LCSC:** `C21190`
 - **R9**
   - **Value:** `1k`
   - **Library Part:** `Device:R`
+  - **Footprint:** `Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder`
   - **Description:** Resistor
+  - **LCSC:** `C21190`
 - **R10**
   - **Value:** `1k`
   - **Library Part:** `Device:R`
+  - **Footprint:** `Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder`
   - **Description:** Resistor
+  - **LCSC:** `C21190`
 - **R11**
   - **Value:** `1k`
   - **Library Part:** `Device:R`
+  - **Footprint:** `Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder`
   - **Description:** Resistor
+  - **LCSC:** `C21190`
 - **R12**
   - **Value:** `1k`
   - **Library Part:** `Device:R`
+  - **Footprint:** `Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder`
   - **Description:** Resistor
+  - **LCSC:** `C21190`
 - **R13**
   - **Value:** `1k`
   - **Library Part:** `Device:R`
+  - **Footprint:** `Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder`
   - **Description:** Resistor
+  - **LCSC:** `C21190`
 - **R14**
   - **Value:** `1k`
   - **Library Part:** `Device:R`
+  - **Footprint:** `Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder`
   - **Description:** Resistor
+  - **LCSC:** `C21190`
 - **R15**
   - **Value:** `1k`
   - **Library Part:** `Device:R`
+  - **Footprint:** `Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder`
   - **Description:** Resistor
+  - **LCSC:** `C21190`
 - **R16**
   - **Value:** `1k`
   - **Library Part:** `Device:R`
+  - **Footprint:** `Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder`
   - **Description:** Resistor
+  - **LCSC:** `C21190`
 - **R17**
   - **Value:** `1k`
   - **Library Part:** `Device:R`
+  - **Footprint:** `Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder`
   - **Description:** Resistor
+  - **LCSC:** `C21190`
 - **R18**
   - **Value:** `1k`
   - **Library Part:** `Device:R`
+  - **Footprint:** `Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder`
   - **Description:** Resistor
+  - **LCSC:** `C21190`
 - **U1**
   - **Value:** `TL074`
   - **Library Part:** `Amplifier_Operational:TL074`
+  - **Footprint:** `Package_SO:SOIC-14_3.9x8.7mm_P1.27mm`
   - **Description:** Quad Low-Noise JFET-Input Operational Amplifiers, DIP-14/SOIC-14
   - **Datasheet:** [http://www.ti.com/lit/ds/symlink/tl071.pdf](http://www.ti.com/lit/ds/symlink/tl071.pdf)
+  - **LCSC:** `C2878713`
 - **U2**
   - **Value:** `TL074`
   - **Library Part:** `Amplifier_Operational:TL074`
+  - **Footprint:** `Package_SO:SOIC-14_3.9x8.7mm_P1.27mm`
   - **Description:** Quad Low-Noise JFET-Input Operational Amplifiers, DIP-14/SOIC-14
   - **Datasheet:** [http://www.ti.com/lit/ds/symlink/tl071.pdf](http://www.ti.com/lit/ds/symlink/tl071.pdf)
+  - **LCSC:** `C2878713`
 - **U3**
   - **Value:** `TL074`
   - **Library Part:** `Amplifier_Operational:TL074`
+  - **Footprint:** `Package_SO:SOIC-14_3.9x8.7mm_P1.27mm`
   - **Description:** Quad Low-Noise JFET-Input Operational Amplifiers, DIP-14/SOIC-14
   - **Datasheet:** [http://www.ti.com/lit/ds/symlink/tl071.pdf](http://www.ti.com/lit/ds/symlink/tl071.pdf)
+  - **LCSC:** `C2878713`
 
 ## Power Rails Audit
 

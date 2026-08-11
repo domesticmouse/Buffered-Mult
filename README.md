@@ -28,25 +28,36 @@ See Exploding Shed's [Eurorack Dimensions Guide](https://www.exploding-shed.com/
 - **3× 3.5 mm mono input jacks:**
   - Input 2 is normalled to Input 1.
   - Input 3 is normalled to Input 2.
-- **Cascading Normaling Routing:**
+- **Cascading Normalling Routing:**
   - **1 Input patched (Input 1):** Functions as a **1×9** mult (1 input split to 9 outputs).
-  - **2 Inputs patched (Inputs 1 & 2):** Functions as **1×3** and **1×6** mults.
+  - **2 Inputs patched (Inputs 1 & 2):** Functions as **1×3** (Input 1) and **1×6** (Input 2) mults.
   - **3 Inputs patched (Inputs 1, 2 & 3):** Functions as **3 independent 1×3** mults.
-- **100 kΩ pulldown resistors** on inputs to prevent floating inputs when unpatched.
+- **100 kΩ pulldown resistors** (`R1`–`R3`) on inputs to prevent floating inputs when unpatched.
+- **Input ESD & RF Filtering:** 1 kΩ series resistors (`R16`–`R18`) and 100 pF capacitors (`C9`–`C11`) provide high-frequency noise filtering and ESD protection.
 
 ### Outputs
 - **9× 3.5 mm mono output jacks:** 3 dedicated buffered outputs for each of the 3 input channels.
-- **Bipolar LED Indication:** A pair of opposing-polarity LEDs per channel to indicate positive (+) and negative (-) voltage states.
+- **1 kΩ Short-Circuit Protection:** Output series resistors (`R7`–`R15`) protect op-amps during cable insertion/patching shorts while maintaining stability under capacitive cable loads.
+- **Bipolar LED Indication:** Opposing-polarity LED pairs (`D1`–`D6`) driven by dedicated active op-amp constant-current stages (`R4`–`R6`) indicate positive (+) and negative (-) voltage states without loading signal lines.
 
 ---
 
-## Circuit Design
+## Circuit & Physical Design
 
-- **TL074 Operational Amplifiers:** Configured as high-impedance unity-gain buffers.
-- **Visual Feedback:** Opposing-polarity LED pair per channel for signal polarity  indication.
-- **Power Connector:** Standard 2×5-pin IDC header for Eurorack ±12V power connection.
-- **Power Filtering:** Power supply decoupling capacitors per IC for noise mitigation.
-- **Power Protection:** Reverse-polarity protection via Schottky diodes.
+- **TL074 Quad Operational Amplifiers:** Configured as high-impedance unity-gain buffers (`U1`, `U2`, `U3`).
+- **Active Visual Feedback:** 4th op-amp stage on each TL074 drives bipolar indicator LEDs in a constant-current feedback arrangement.
+- **Power Connector:** Standard 2×5-pin IDC header (`J1`) for Eurorack ±12V power connection.
+- **Power Filtering & Decoupling:** Bulk 10 µF electrolytic capacitors (`C7`, `C8`) on power entry rails plus 100 nF ceramic decoupling capacitors (`C1`–`C6`) per IC package.
+- **Reverse Power Protection:** MBR0520 Schottky diodes (`D7`, `D8`) protect against reverse ribbon cable insertion.
+- **Two-Sided Board Layout:** All SMT components on top layer (`F.Cu`); through-hole jacks and LEDs on bottom layer (`B.Cu`) for front panel mounting.
+
+---
+
+## Verification & Fabrication
+
+- **KiCad Electrical Rules Check (ERC):** 0 Errors, 0 Warnings.
+- **KiCad Design Rules Check (DRC):** 0 Track / Clearance Errors.
+- **JLCPCB Automated Assembly Ready:** Complete Gerber ZIP, SMT BOM (`BOM-Buffered-Mult.csv`), and Centroid CPL (`CPL-Buffered-Mult.csv`) generated in [`jlcpcb/production_files/`](jlcpcb/production_files/).
 
 ## License
 
