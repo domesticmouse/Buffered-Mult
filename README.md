@@ -21,6 +21,7 @@ This **buffered mult circuit** solves that problem by using active operational a
 ### Dimensions
 - **Height:** 3U (Eurorack format)
 - **Width:** 6HP
+- **Faceplate:** Complete mechanical specifications and KiCad panel design are available in [`faceplate/README.md`](faceplate/README.md).
 
 See Exploding Shed's [Eurorack Dimensions Guide](https://www.exploding-shed.com/synth-diy-guides/standards-of-eurorack/eurorack-dimensions/) for sizing a 6hp module.
 
@@ -55,9 +56,10 @@ See Exploding Shed's [Eurorack Dimensions Guide](https://www.exploding-shed.com/
 
 ## Verification & Fabrication
 
-- **KiCad Electrical Rules Check (ERC):** 0 Errors, 0 Warnings.
-- **KiCad Design Rules Check (DRC):** 0 Track / Clearance Errors.
+- **KiCad Electrical Rules Check (ERC):** 0 Errors, 0 Warnings on main board schematic.
+- **KiCad Design Rules Check (DRC):** 0 Track / Clearance Errors on main board and faceplate PCB.
 - **JLCPCB Automated Assembly Ready:** Complete Gerber ZIP, SMT BOM (`BOM-Buffered-Mult.csv`), and Centroid CPL (`CPL-Buffered-Mult.csv`) generated in [`jlcpcb/production_files/`](jlcpcb/production_files/).
+- **Faceplate Fabrication:** Complete KiCad project, panel Gerber files, and drill specs in [`faceplate/`](faceplate/).
 
 ## License
 
