@@ -29,13 +29,23 @@ The analysis script is located at:
 ### 1. Run Analysis and Output to stdout
 
 ```bash
-uv run .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py path/to/design.kicad_sch
+uv run --isolated .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py path/to/design.kicad_sch
+```
+
+*Or using standard Python 3:*
+```bash
+python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py path/to/design.kicad_sch
 ```
 
 ### 2. Save Analysis directly to a Markdown File
 
 ```bash
-uv run .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py path/to/design.kicad_sch -o path/to/report.md
+uv run --isolated .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py path/to/design.kicad_sch -o path/to/report.md
+```
+
+*Or using standard Python 3:*
+```bash
+python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py path/to/design.kicad_sch -o path/to/report.md
 ```
 
 ## Report Sections & Review Guide
