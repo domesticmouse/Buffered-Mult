@@ -1007,16 +1007,16 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=(
             "Examples:\n"
-            "  python3 analyze_schematic.py --help\n"
-            "  python3 analyze_schematic.py summary path/to/design.kicad_sch\n"
-            "  python3 analyze_schematic.py bom path/to/design.kicad_sch\n"
-            "  python3 analyze_schematic.py erc path/to/design.kicad_sch\n"
-            "  python3 analyze_schematic.py power path/to/design.kicad_sch\n"
-            "  python3 analyze_schematic.py topologies path/to/design.kicad_sch\n"
-            "  python3 analyze_schematic.py nets path/to/design.kicad_sch --ref U1\n"
-            "  python3 analyze_schematic.py nets path/to/design.kicad_sch --net IN_A\n"
-            "  python3 analyze_schematic.py unconnected path/to/design.kicad_sch\n"
-            "  python3 analyze_schematic.py report path/to/design.kicad_sch -o report.md\n"
+            "  uv run --isolated analyze_schematic.py --help\n"
+            "  uv run --isolated analyze_schematic.py summary path/to/design.kicad_sch\n"
+            "  uv run --isolated analyze_schematic.py bom path/to/design.kicad_sch\n"
+            "  uv run --isolated analyze_schematic.py erc path/to/design.kicad_sch\n"
+            "  uv run --isolated analyze_schematic.py power path/to/design.kicad_sch\n"
+            "  uv run --isolated analyze_schematic.py topologies path/to/design.kicad_sch\n"
+            "  uv run --isolated analyze_schematic.py nets path/to/design.kicad_sch --ref U1\n"
+            "  uv run --isolated analyze_schematic.py nets path/to/design.kicad_sch --net IN_A\n"
+            "  uv run --isolated analyze_schematic.py unconnected path/to/design.kicad_sch\n"
+            "  uv run --isolated analyze_schematic.py report path/to/design.kicad_sch -o report.md\n"
         ),
     )
 

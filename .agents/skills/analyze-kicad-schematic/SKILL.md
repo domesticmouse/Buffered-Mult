@@ -13,7 +13,7 @@ This skill provides automated analysis of KiCad 7/8/9/10+ schematic (`.kicad_sch
 
 ## Prerequisites
 
-- **uv** (recommended) or **Python 3.6+**
+- **uv** (preferred runtime) or **Python 3.6+**
 - **KiCad CLI (`kicad-cli`)**: Auto-detected from system `PATH` or standard installation locations:
   - macOS: `/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli`, `/Applications/KiCad <version>/...`, Homebrew (`/opt/homebrew/bin/kicad-cli`).
   - Linux: `/usr/bin/kicad-cli`, `/usr/local/bin/kicad-cli`, Snap, Flatpak.
@@ -28,16 +28,18 @@ The analysis script is located at:
 
 ## Discovering Commands & Options (`--help`)
 
-Always check `--help` to inspect available query subcommands or specific subcommand flags:
+Always check `--help` using `uv run --isolated` to inspect available query subcommands or specific subcommand flags:
 
 ```bash
 # View top-level help and list of subcommands
-python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py --help
+uv run --isolated .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py --help
 
 # View help and filtering options for a specific subcommand
-python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py nets --help
-python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py bom --help
+uv run --isolated .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py nets --help
+uv run --isolated .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py bom --help
 ```
+
+*(Fallback without uv: `python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py --help`)*
 
 ---
 
@@ -62,39 +64,39 @@ Instead of running a monolithic report, prefer running the specific subcommand r
 
 ### 1. Inspect Bill of Materials (BOM)
 ```bash
-python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py bom path/to/design.kicad_sch
+uv run --isolated .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py bom path/to/design.kicad_sch
 ```
 
 ### 2. Run Electrical Rules Check (ERC)
 ```bash
-python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py erc path/to/design.kicad_sch
+uv run --isolated .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py erc path/to/design.kicad_sch
 ```
 
 ### 3. Trace a Specific Net or Component Pins
 ```bash
 # Filter signal nets connected to component U1
-python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py nets path/to/design.kicad_sch --ref U1
+uv run --isolated .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py nets path/to/design.kicad_sch --ref U1
 
 # Filter by net name (e.g. INPUT1)
-python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py nets path/to/design.kicad_sch --net INPUT1
+uv run --isolated .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py nets path/to/design.kicad_sch --net INPUT1
 ```
 
 ### 4. Audit Power Rails & Decoupling
 ```bash
-python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py power path/to/design.kicad_sch
+uv run --isolated .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py power path/to/design.kicad_sch
 ```
 
 ### 5. Check Unconnected / No-Connect Pins
 ```bash
-python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py unconnected path/to/design.kicad_sch
+uv run --isolated .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py unconnected path/to/design.kicad_sch
 ```
 
 ### 6. Detect Circuit Topologies & Filter Cutoffs
 ```bash
-python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py topologies path/to/design.kicad_sch
+uv run --isolated .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py topologies path/to/design.kicad_sch
 ```
 
 ### 7. Generate Full Report to a File
 ```bash
-python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py report path/to/design.kicad_sch -o path/to/report.md
+uv run --isolated .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py report path/to/design.kicad_sch -o path/to/report.md
 ```
