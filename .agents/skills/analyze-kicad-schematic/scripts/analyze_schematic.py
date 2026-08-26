@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-KiCad Schematic Analyzer
-Parses a .kicad_sch file using kicad-cli and generates a structured Markdown report
-suitable for LLM engineering review.
+KiCad Schematic Analyzer & Query Tool
+Parses a .kicad_sch file using kicad-cli and generates structured Markdown reports
+or targeted query outputs for LLM engineering review.
 """
 
 import argparse
@@ -92,9 +92,7 @@ def find_kicad_cli():
 
 
 def is_executable_kicad(path):
-    """
-    Tests if a given binary path is a functioning kicad-cli.
-    """
+    """Tests if a given binary path is a functioning kicad-cli."""
     try:
         res = subprocess.run(
             [path, "--version"], capture_output=True, text=True, timeout=5, check=False
@@ -144,9 +142,7 @@ def get_hierarchical_sheets(filepath):
 
 
 def export_netlist(kicad_cli, sch_path, xml_path):
-    """
-    Runs kicad-cli to export the schematic netlist to XML.
-    """
+    """Runs kicad-cli to export the schematic netlist to XML."""
     cmd = [
         kicad_cli,
         "sch",
@@ -244,9 +240,7 @@ def run_erc(kicad_cli, sch_path):
 
 
 def parse_xml_netlist(xml_path):
-    """
-    Parses the exported XML netlist and returns structured data.
-    """
+    """Parses the exported XML netlist and returns structured data."""
     try:
         tree = ET.parse(xml_path)
         root = tree.getroot()
@@ -504,6 +498,38 @@ def format_frequency(hz):
         return f"{hz:.2f} Hz"
 
 
+def classify_nets(nets):
+    """Classifies nets into power nets and signal nets."""
+    power_nets = []
+    signal_nets = []
+    power_patterns_compiled = [re.compile(p, re.IGNORECASE) for p in POWER_NET_PATTERNS]
+
+    for net in nets:
+        is_power = False
+        for pattern in power_patterns_compiled:
+            if pattern.search(net["name"]):
+                is_power = True
+                break
+
+        if not is_power:
+            for node in net["nodes"]:
+                if node["type"] in ["power_in", "power_out"]:
+                    is_power = True
+                    break
+
+        if net["name"].startswith("unconnected-"):
+            continue
+
+        if is_power:
+            power_nets.append(net)
+        else:
+            signal_nets.append(net)
+
+    power_nets.sort(key=lambda x: x["name"])
+    signal_nets.sort(key=lambda x: x["name"])
+    return power_nets, signal_nets
+
+
 def detect_circuit_topologies(components, nets, power_net_names):
     """
     Identifies common circuit topologies:
@@ -595,35 +621,31 @@ def detect_circuit_topologies(components, nets, power_net_names):
     return findings
 
 
-def generate_markdown(
-    metadata,
-    components,
-    nets,
-    connected_pins,
-    hierarchical_sheets,
-    erc_violations,
-    erc_summary,
-):
-    """
-    Generates the final comprehensive Markdown report.
-    """
-    lines = []
+# --- Markdown Generation Functions for Targeted Queries ---
 
-    # 1. Metadata Summary
-    lines.append(f"# KiCad Schematic Design Report: {metadata['source']}")
+
+def generate_summary_markdown(metadata, components, nets, hierarchical_sheets):
+    """Generates design metadata and high-level summary statistics."""
+    lines = []
+    lines.append(f"# Schematic Summary: {metadata['source']}")
     lines.append("")
+    lines.append(f"- **Design Source:** {metadata['source']}")
     lines.append(f"- **Date:** {metadata['date']}")
     lines.append(f"- **KiCad Tool Version:** {metadata['tool']}")
-    lines.append(f"- **Design Source:** {metadata['source']}")
     if hierarchical_sheets:
         lines.append(
             f"- **Hierarchical Sheets ({len(hierarchical_sheets)}):** {', '.join(hierarchical_sheets)}"
         )
     else:
         lines.append("- **Schematic Structure:** Single Sheet")
-    lines.append("")
+    lines.append(f"- **Total Components:** {len(components)}")
+    lines.append(f"- **Total Nets:** {len(nets)}")
+    return "\n".join(lines)
 
-    # 2. Electrical Rules Check (ERC) Summary
+
+def generate_erc_markdown(erc_violations, erc_summary):
+    """Generates Electrical Rules Check (ERC) Markdown report."""
+    lines = []
     lines.append("## Electrical Rules Check (ERC)")
     lines.append("")
     if not erc_violations:
@@ -645,9 +667,12 @@ def generate_markdown(
             lines.append(f"- {sev_badge} `{v['type']}`: {v['description']}")
             if v["context"]:
                 lines.append(f"  - Context: `{v['context']}`")
-    lines.append("")
+    return "\n".join(lines)
 
-    # 3. Consolidated Bill of Materials (BOM) Table
+
+def generate_bom_markdown(components):
+    """Generates consolidated Bill of Materials (BOM) table."""
+    lines = []
     lines.append("## Bill of Materials (BOM) Summary")
     lines.append("")
     lines.append(
@@ -682,52 +707,29 @@ def generate_markdown(
         lines.append(
             f"| **{len(refs)}** | `{ref_str}` | `{val_disp or '-'}` | `{fp_short or '-'}` | `{part_id}` | {desc or '-'} |"
         )
+    return "\n".join(lines)
+
+
+def generate_topologies_markdown(components, nets, power_net_names):
+    """Generates detected circuit topologies report."""
+    lines = []
+    lines.append("## Detected Circuit Topologies & Calculations")
     lines.append("")
-
-    # Classify Power Nets vs Signal Nets
-    power_nets = []
-    signal_nets = []
-    power_patterns_compiled = [re.compile(p, re.IGNORECASE) for p in POWER_NET_PATTERNS]
-
-    for net in nets:
-        is_power = False
-        for pattern in power_patterns_compiled:
-            if pattern.search(net["name"]):
-                is_power = True
-                break
-
-        if not is_power:
-            for node in net["nodes"]:
-                if node["type"] in ["power_in", "power_out"]:
-                    is_power = True
-                    break
-
-        if net["name"].startswith("unconnected-"):
-            continue
-
-        if is_power:
-            power_nets.append(net)
-        else:
-            signal_nets.append(net)
-
-    power_nets.sort(key=lambda x: x["name"])
-    signal_nets.sort(key=lambda x: x["name"])
-    power_net_names = {n["name"] for n in power_nets}
-
-    # 4. Detected Circuit Topologies & Key Functions
     topologies = detect_circuit_topologies(components, nets, power_net_names)
     if topologies:
-        lines.append("## Detected Circuit Topologies & Calculations")
-        lines.append("")
         lines.extend(topologies)
-        lines.append("")
+    else:
+        lines.append("*No recognizable analog/digital subcircuits detected.*")
+    return "\n".join(lines)
 
-    # 5. Power Rails Audit
+
+def generate_power_markdown(power_nets):
+    """Generates Power Rails Audit report."""
+    lines = []
     lines.append("## Power Rails Audit")
     lines.append("")
     if not power_nets:
         lines.append("*No power rails identified.*")
-        lines.append("")
     else:
         for net in power_nets:
             lines.append(f"### Net: `{net['name']}` ({len(net['nodes'])} connections)")
@@ -743,15 +745,39 @@ def generate_markdown(
                         f"- **{node['ref']}** - Pin {node['pin']}{func_str}{type_str}"
                     )
             lines.append("")
+    return "\n".join(lines).rstrip()
 
-    # 6. Connectivity Netlist (Signals)
-    lines.append("## Signal Netlist")
+
+def generate_nets_markdown(signal_nets, filter_net=None, filter_ref=None):
+    """
+    Generates signal netlist connectivity report, with optional filtering by net name or component ref.
+    """
+    lines = []
+    title = "## Signal Netlist"
+    if filter_net:
+        title += f" (Filtered by net: '{filter_net}')"
+    if filter_ref:
+        title += f" (Filtered by component: '{filter_ref}')"
+
+    lines.append(title)
     lines.append("")
-    if not signal_nets:
-        lines.append("*No signal nets identified.*")
-        lines.append("")
+
+    matching_nets = []
+    for net in signal_nets:
+        if filter_net and filter_net.lower() not in net["name"].lower():
+            continue
+        if filter_ref:
+            has_ref = any(
+                node["ref"].lower() == filter_ref.lower() for node in net["nodes"]
+            )
+            if not has_ref:
+                continue
+        matching_nets.append(net)
+
+    if not matching_nets:
+        lines.append("*No matching signal nets found.*")
     else:
-        for net in signal_nets:
+        for net in matching_nets:
             lines.append(f"### Net: `{net['name']}`")
             if not net["nodes"]:
                 lines.append("*(No connections)*")
@@ -766,7 +792,12 @@ def generate_markdown(
                     )
             lines.append("")
 
-    # 7. Unconnected / No-Connect Pins
+    return "\n".join(lines).rstrip()
+
+
+def generate_unconnected_markdown(components, nets, connected_pins):
+    """Generates Unconnected and No-Connect Pins report."""
+    lines = []
     lines.append("## Unconnected & No-Connect Pins")
     lines.append("")
 
@@ -802,67 +833,158 @@ def generate_markdown(
 
     if not unique_unconnected:
         lines.append("*All component pins are connected.*")
-        lines.append("")
     else:
         for ref, pin, reason, ptype in unique_unconnected:
             type_str = f" ({ptype})" if ptype else ""
             lines.append(f"- **{ref}** - Pin {pin} [{reason}]{type_str}")
-        lines.append("")
 
     return "\n".join(lines)
 
 
-def main():
-    parser = argparse.ArgumentParser(
-        description="Extract KiCad schematic metadata, components, ERC results, and connectivity to Markdown for review."
-    )
-    parser.add_argument(
-        "schematic", help="Path to the KiCad .kicad_sch schematic file."
-    )
-    parser.add_argument(
-        "-o",
-        "--output",
-        help="Optional path to save the generated Markdown report file.",
-    )
+def generate_full_report(
+    metadata,
+    components,
+    nets,
+    connected_pins,
+    hierarchical_sheets,
+    erc_violations,
+    erc_summary,
+):
+    """Combines all report sections into a comprehensive Markdown report."""
+    power_nets, signal_nets = classify_nets(nets)
+    power_net_names = {n["name"] for n in power_nets}
 
-    args = parser.parse_args()
-    sch_path = args.schematic
+    sections = [
+        generate_summary_markdown(
+            metadata, components, nets, hierarchical_sheets
+        ),
+        generate_erc_markdown(erc_violations, erc_summary),
+        generate_bom_markdown(components),
+        generate_topologies_markdown(components, nets, power_net_names),
+        generate_power_markdown(power_nets),
+        generate_nets_markdown(signal_nets),
+        generate_unconnected_markdown(components, nets, connected_pins),
+    ]
+    return "\n\n".join(sections)
 
-    if not os.path.isfile(sch_path):
-        sys.stderr.write(f"Error: Schematic file '{sch_path}' not found.\n")
-        sys.exit(1)
 
-    # 1. Discover kicad-cli binary
-    kicad_cli = find_kicad_cli()
-    if not kicad_cli:
-        sys.stderr.write(
-            "Error: 'kicad-cli' command not found in PATH or standard installation directories.\n"
-            "Please ensure KiCad 7/8/9/10 is installed.\n"
-        )
-        sys.exit(1)
-
-    # 2. Check for Hierarchical Sheets
-    hierarchical_sheets = get_hierarchical_sheets(sch_path)
-
-    # 3. Run ERC
-    erc_violations, erc_summary = run_erc(kicad_cli, sch_path)
-
-    # 4. Export XML netlist using a temp file
-    temp_dir = tempfile.gettempdir()
-    temp_xml_fd, temp_xml_path = tempfile.mkstemp(
-        suffix=".xml", prefix="kicad_sch_net_", dir=temp_dir
-    )
-    os.close(temp_xml_fd)
-
-    try:
-        if not export_netlist(kicad_cli, sch_path, temp_xml_path):
+def output_result(content, output_path=None):
+    """Outputs Markdown string to stdout or writes to a file."""
+    if output_path:
+        try:
+            with open(output_path, "w", encoding="utf-8") as out_f:
+                out_f.write(content + "\n")
+            print(f"Output successfully saved to {output_path}")
+        except OSError as e:
+            sys.stderr.write(f"Error writing output file: {e}\n")
             sys.exit(1)
+    else:
+        print(content)
 
-        # 5. Parse XML netlist
-        metadata, components, nets, connected_pins = parse_xml_netlist(temp_xml_path)
 
-        # 6. Generate Markdown
-        markdown_content = generate_markdown(
+# --- Subcommand Handlers ---
+
+
+def handle_summary(args, kicad_cli):
+    """Handler for 'summary' query."""
+    hierarchical_sheets = get_hierarchical_sheets(args.schematic)
+    with tempfile.NamedTemporaryFile(
+        suffix=".xml", prefix="kicad_sch_net_", delete=True
+    ) as temp_xml:
+        if not export_netlist(kicad_cli, args.schematic, temp_xml.name):
+            sys.exit(1)
+        metadata, components, nets, _ = parse_xml_netlist(temp_xml.name)
+        out = generate_summary_markdown(
+            metadata, components, nets, hierarchical_sheets
+        )
+        output_result(out, args.output)
+
+
+def handle_erc(args, kicad_cli):
+    """Handler for 'erc' query."""
+    erc_violations, erc_summary = run_erc(kicad_cli, args.schematic)
+    out = generate_erc_markdown(erc_violations, erc_summary)
+    output_result(out, args.output)
+
+
+def handle_bom(args, kicad_cli):
+    """Handler for 'bom' query."""
+    with tempfile.NamedTemporaryFile(
+        suffix=".xml", prefix="kicad_sch_net_", delete=True
+    ) as temp_xml:
+        if not export_netlist(kicad_cli, args.schematic, temp_xml.name):
+            sys.exit(1)
+        _, components, _, _ = parse_xml_netlist(temp_xml.name)
+        out = generate_bom_markdown(components)
+        output_result(out, args.output)
+
+
+def handle_topologies(args, kicad_cli):
+    """Handler for 'topologies' / 'circuits' query."""
+    with tempfile.NamedTemporaryFile(
+        suffix=".xml", prefix="kicad_sch_net_", delete=True
+    ) as temp_xml:
+        if not export_netlist(kicad_cli, args.schematic, temp_xml.name):
+            sys.exit(1)
+        _, components, nets, _ = parse_xml_netlist(temp_xml.name)
+        power_nets, _ = classify_nets(nets)
+        power_net_names = {n["name"] for n in power_nets}
+        out = generate_topologies_markdown(components, nets, power_net_names)
+        output_result(out, args.output)
+
+
+def handle_power(args, kicad_cli):
+    """Handler for 'power' query."""
+    with tempfile.NamedTemporaryFile(
+        suffix=".xml", prefix="kicad_sch_net_", delete=True
+    ) as temp_xml:
+        if not export_netlist(kicad_cli, args.schematic, temp_xml.name):
+            sys.exit(1)
+        _, _, nets, _ = parse_xml_netlist(temp_xml.name)
+        power_nets, _ = classify_nets(nets)
+        out = generate_power_markdown(power_nets)
+        output_result(out, args.output)
+
+
+def handle_nets(args, kicad_cli):
+    """Handler for 'nets' query."""
+    with tempfile.NamedTemporaryFile(
+        suffix=".xml", prefix="kicad_sch_net_", delete=True
+    ) as temp_xml:
+        if not export_netlist(kicad_cli, args.schematic, temp_xml.name):
+            sys.exit(1)
+        _, _, nets, _ = parse_xml_netlist(temp_xml.name)
+        _, signal_nets = classify_nets(nets)
+        out = generate_nets_markdown(
+            signal_nets, filter_net=args.net, filter_ref=args.ref
+        )
+        output_result(out, args.output)
+
+
+def handle_unconnected(args, kicad_cli):
+    """Handler for 'unconnected' query."""
+    with tempfile.NamedTemporaryFile(
+        suffix=".xml", prefix="kicad_sch_net_", delete=True
+    ) as temp_xml:
+        if not export_netlist(kicad_cli, args.schematic, temp_xml.name):
+            sys.exit(1)
+        _, components, nets, connected_pins = parse_xml_netlist(temp_xml.name)
+        out = generate_unconnected_markdown(components, nets, connected_pins)
+        output_result(out, args.output)
+
+
+def handle_report(args, kicad_cli):
+    """Handler for 'report' / 'all' query (comprehensive report)."""
+    hierarchical_sheets = get_hierarchical_sheets(args.schematic)
+    erc_violations, erc_summary = run_erc(kicad_cli, args.schematic)
+
+    with tempfile.NamedTemporaryFile(
+        suffix=".xml", prefix="kicad_sch_net_", delete=True
+    ) as temp_xml:
+        if not export_netlist(kicad_cli, args.schematic, temp_xml.name):
+            sys.exit(1)
+        metadata, components, nets, connected_pins = parse_xml_netlist(temp_xml.name)
+        out = generate_full_report(
             metadata,
             components,
             nets,
@@ -871,23 +993,164 @@ def main():
             erc_violations,
             erc_summary,
         )
+        output_result(out, args.output)
 
-        # 7. Output to stdout or file
-        if args.output:
-            try:
-                with open(args.output, "w", encoding="utf-8") as out_f:
-                    out_f.write(markdown_content)
-                print(f"Report successfully saved to {args.output}")
-            except OSError as e:
-                sys.stderr.write(f"Error writing output file: {e}\n")
-                sys.exit(1)
-        else:
-            print(markdown_content)
 
-    finally:
-        if os.path.exists(temp_xml_path):
-            with suppress(OSError):
-                os.remove(temp_xml_path)
+def main():
+    parser = argparse.ArgumentParser(
+        prog="analyze_schematic.py",
+        description=(
+            "KiCad Schematic Analyzer & Targeted Query CLI.\n"
+            "Extracts targeted schematic data (BOM, ERC, Power, Nets, Topologies, Unconnected pins) "
+            "or generates a full Markdown review report."
+        ),
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=(
+            "Examples:\n"
+            "  python3 analyze_schematic.py --help\n"
+            "  python3 analyze_schematic.py summary path/to/design.kicad_sch\n"
+            "  python3 analyze_schematic.py bom path/to/design.kicad_sch\n"
+            "  python3 analyze_schematic.py erc path/to/design.kicad_sch\n"
+            "  python3 analyze_schematic.py power path/to/design.kicad_sch\n"
+            "  python3 analyze_schematic.py topologies path/to/design.kicad_sch\n"
+            "  python3 analyze_schematic.py nets path/to/design.kicad_sch --ref U1\n"
+            "  python3 analyze_schematic.py nets path/to/design.kicad_sch --net IN_A\n"
+            "  python3 analyze_schematic.py unconnected path/to/design.kicad_sch\n"
+            "  python3 analyze_schematic.py report path/to/design.kicad_sch -o report.md\n"
+        ),
+    )
+
+    subparsers = parser.add_subparsers(
+        title="Available Query Subcommands",
+        dest="command",
+        help="Run `analyze_schematic.py <command> --help` for specific query options.",
+    )
+
+    def add_common_args(sub_p):
+        sub_p.add_argument(
+            "schematic",
+            help="Path to the KiCad .kicad_sch schematic file.",
+        )
+        sub_p.add_argument(
+            "-o",
+            "--output",
+            help="Optional file path to save output Markdown instead of printing to stdout.",
+        )
+
+    # 1. summary
+    p_summary = subparsers.add_parser(
+        "summary",
+        help="Design overview, sheet hierarchy, and metadata summary.",
+        description="Extract design metadata (date, tool, source), sheet hierarchy, and overall counts.",
+    )
+    add_common_args(p_summary)
+    p_summary.set_defaults(func=handle_summary)
+
+    # 2. erc
+    p_erc = subparsers.add_parser(
+        "erc",
+        help="Run Electrical Rules Check (ERC) and report errors/warnings.",
+        description="Executes kicad-cli sch erc, filtering out headless environment library noise.",
+    )
+    add_common_args(p_erc)
+    p_erc.set_defaults(func=handle_erc)
+
+    # 3. bom
+    p_bom = subparsers.add_parser(
+        "bom",
+        help="Consolidated Bill of Materials (BOM) table.",
+        description="Generates a compact BOM table grouping parts by value, footprint, LCSC/MPN, and reference ranges.",
+    )
+    add_common_args(p_bom)
+    p_bom.set_defaults(func=handle_bom)
+
+    # 4. topologies / circuits
+    p_topologies = subparsers.add_parser(
+        "topologies",
+        aliases=["circuits"],
+        help="Detect analog/digital circuit topologies (filters, op-amps).",
+        description="Detects RC filters (with calculated cutoff fc), op-amp voltage followers, active LED drivers, etc.",
+    )
+    add_common_args(p_topologies)
+    p_topologies.set_defaults(func=handle_topologies)
+
+    # 5. power
+    p_power = subparsers.add_parser(
+        "power",
+        help="Audit power rails and all attached component pins.",
+        description="Identifies power nets (+12V, -12V, GND, VCC, etc.) and lists every connected component pin.",
+    )
+    add_common_args(p_power)
+    p_power.set_defaults(func=handle_power)
+
+    # 6. nets
+    p_nets = subparsers.add_parser(
+        "nets",
+        help="Inspect signal netlist connectivity with optional filters.",
+        description="Lists signal nets and their connected pins. Allows filtering by net name or component reference.",
+    )
+    add_common_args(p_nets)
+    p_nets.add_argument(
+        "--net",
+        help="Filter signal nets by name (substring match, case-insensitive).",
+    )
+    p_nets.add_argument(
+        "--ref",
+        help="Filter signal nets connected to a specific component reference (e.g. U1, J1, R5).",
+    )
+    p_nets.set_defaults(func=handle_nets)
+
+    # 7. unconnected
+    p_unconn = subparsers.add_parser(
+        "unconnected",
+        help="List unconnected and explicit no-connect component pins.",
+        description="Finds physical pins that are missing from nets or explicitly marked as no-connect.",
+    )
+    add_common_args(p_unconn)
+    p_unconn.set_defaults(func=handle_unconnected)
+
+    # 8. report / all
+    p_report = subparsers.add_parser(
+        "report",
+        aliases=["all"],
+        help="Generate the full, comprehensive Markdown report (combining all sections).",
+        description="Runs full analysis (Metadata, ERC, BOM, Topologies, Power Rails, Signal Netlist, Unconnected Pins).",
+    )
+    add_common_args(p_report)
+    p_report.set_defaults(func=handle_report)
+
+    # Legacy fallback / no subcommand support
+    # If the user runs `analyze_schematic.py file.kicad_sch` without a subcommand,
+    # or runs without args, show help or parse properly.
+    if len(sys.argv) == 1:
+        parser.print_help(sys.stderr)
+        sys.exit(1)
+
+    # If first positional argument is a file ending in .kicad_sch (legacy usage), treat as 'report'
+    if len(sys.argv) > 1 and sys.argv[1].endswith(".kicad_sch") and sys.argv[1] not in subparsers.choices:
+        sys.argv.insert(1, "report")
+
+    args = parser.parse_args()
+
+    if not hasattr(args, "func"):
+        parser.print_help(sys.stderr)
+        sys.exit(1)
+
+    sch_path = args.schematic
+    if not os.path.isfile(sch_path):
+        sys.stderr.write(f"Error: Schematic file '{sch_path}' not found.\n")
+        sys.exit(1)
+
+    # Discover kicad-cli binary
+    kicad_cli = find_kicad_cli()
+    if not kicad_cli:
+        sys.stderr.write(
+            "Error: 'kicad-cli' command not found in PATH or standard installation directories.\n"
+            "Please ensure KiCad 7/8/9/10 is installed.\n"
+        )
+        sys.exit(1)
+
+    args.func(args, kicad_cli)
 
 
 if __name__ == "__main__":

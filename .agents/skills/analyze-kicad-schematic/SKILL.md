@@ -2,14 +2,14 @@
 name: analyze-kicad-schematic
 description: >-
   Analyzes KiCad schematic files (.kicad_sch) and generates structured markdown
-  reports containing component catalogs, power rails audit, connectivity netlists,
-  and unconnected/no-connect pin checks. Use this skill when reviewing, auditing,
+  reports or targeted query results (BOM, ERC, power rails, signal netlists,
+  circuit topologies, unconnected pins). Use this skill when reviewing, auditing,
   or troubleshooting KiCad schematic designs.
 ---
 
 # KiCad Schematic Analyzer
 
-This skill provides automated analysis of KiCad 7/8/9/10+ schematic (`.kicad_sch`) files using `kicad-cli`. It generates comprehensive Markdown reports summarizing design metadata, Electrical Rules Check (ERC) results, a consolidated Bill of Materials (BOM) table, detected circuit topologies & calculations (e.g. RC filters, op-amp feedback loops), power rail connections, netlists, and unconnected pins.
+This skill provides automated analysis of KiCad 7/8/9/10+ schematic (`.kicad_sch`) files using `kicad-cli`. It supports **modular CLI subcommands** so you can query specific aspects of a schematic without polluting the context with monolithic reports, as well as generating full comprehensive Markdown reports.
 
 ## Prerequisites
 
@@ -24,46 +24,77 @@ This skill provides automated analysis of KiCad 7/8/9/10+ schematic (`.kicad_sch
 The analysis script is located at:
 - [`scripts/analyze_schematic.py`](./scripts/analyze_schematic.py)
 
-## Usage
+---
 
-### 1. Run Analysis and Output to stdout
+## Discovering Commands & Options (`--help`)
 
-```bash
-uv run --isolated .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py path/to/design.kicad_sch
-```
-
-*Or using standard Python 3:*
-```bash
-python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py path/to/design.kicad_sch
-```
-
-### 2. Save Analysis directly to a Markdown File
+Always check `--help` to inspect available query subcommands or specific subcommand flags:
 
 ```bash
-uv run --isolated .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py path/to/design.kicad_sch -o path/to/report.md
+# View top-level help and list of subcommands
+python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py --help
+
+# View help and filtering options for a specific subcommand
+python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py nets --help
+python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py bom --help
 ```
 
-*Or using standard Python 3:*
+---
+
+## Targeted Query Subcommands
+
+Instead of running a monolithic report, prefer running the specific subcommand relevant to the question being asked:
+
+| Subcommand | Description | When to use |
+| :--- | :--- | :--- |
+| `summary` | Design overview, KiCad version, sheet hierarchy, total components/nets | Initial inspection or high-level sanity check |
+| `erc` | Runs ERC check (`kicad-cli sch erc`) and reports true electrical errors/warnings | Checking electrical validity, unrouted nets, or conflicts |
+| `bom` | Consolidated Bill of Materials table grouped by value, footprint, LCSC/MPN | Part counting, component lookup, sourcing reviews |
+| `topologies` (or `circuits`) | Detects RC filters (with $f_c$), op-amp voltage followers, LED feedback drivers | Circuit function understanding, analog verification |
+| `power` | Power rails audit (`+12V`, `-12V`, `GND`, etc.) and all connected pins | Power distribution inspection, ground connection audits |
+| `nets` | Signal netlist connections with optional `--net` or `--ref` filters | Tracing specific signals or inspecting pins of a component |
+| `unconnected` | Unconnected physical pins and explicit no-connect flags | Finding missed connections or unrouted pins |
+| `report` (or `all`) | Full comprehensive report combining all sections | Generating a complete archival design review document |
+
+---
+
+## Usage Examples
+
+### 1. Inspect Bill of Materials (BOM)
 ```bash
-python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py path/to/design.kicad_sch -o path/to/report.md
+python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py bom path/to/design.kicad_sch
 ```
 
-## Report Sections & Review Guide
+### 2. Run Electrical Rules Check (ERC)
+```bash
+python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py erc path/to/design.kicad_sch
+```
 
-The generated report contains the following sections:
+### 3. Trace a Specific Net or Component Pins
+```bash
+# Filter signal nets connected to component U1
+python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py nets path/to/design.kicad_sch --ref U1
 
-1. **Metadata Summary**:
-   - Design source file, date, KiCad tool version, and hierarchical sheet structure.
-2. **Electrical Rules Check (ERC)**:
-   - Runs `kicad-cli sch erc` and filters out headless environment library noise while reporting true electrical violations, errors, and warnings.
-3. **Bill of Materials (BOM) Summary**:
-   - Compact table grouping components by value/type, footprint, LCSC/MPN part numbers, and reference ranges (e.g. `R4–R18`).
-4. **Detected Circuit Topologies & Calculations**:
-   - Automatically identifies functional subcircuits such as RC low-pass/high-pass filters (with calculated cutoff frequencies $f_c$) and op-amp stage configurations (voltage followers, active LED drivers, feedback loops).
-5. **Power Rails Audit**:
-   - Identifies power nets (`+12V`, `-12V`, `GND`, `VCC`, `VDD`, etc.) and all component pins attached to each rail.
-6. **Signal Netlist**:
-   - Complete signal netlist mapping all interconnected pins with pin functions and pin types.
-7. **Unconnected & No-Connect Pins**:
-   - Flags physical component pins that are missing from nets or explicitly marked as no-connect.
+# Filter by net name (e.g. INPUT1)
+python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py nets path/to/design.kicad_sch --net INPUT1
+```
 
+### 4. Audit Power Rails & Decoupling
+```bash
+python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py power path/to/design.kicad_sch
+```
+
+### 5. Check Unconnected / No-Connect Pins
+```bash
+python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py unconnected path/to/design.kicad_sch
+```
+
+### 6. Detect Circuit Topologies & Filter Cutoffs
+```bash
+python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py topologies path/to/design.kicad_sch
+```
+
+### 7. Generate Full Report to a File
+```bash
+python3 .agents/skills/analyze-kicad-schematic/scripts/analyze_schematic.py report path/to/design.kicad_sch -o path/to/report.md
+```
