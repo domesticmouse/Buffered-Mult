@@ -2,6 +2,8 @@
 
 A 3-channel active buffered mult (multiple) circuit designed for Eurorack modular synthesizers. View this in [KiCanvas](https://kicanvas.org/?repo=https%3A%2F%2Fgithub.com%2Fdomesticmouse%2FBuffered-Mult).
 
+See [domesticmouse/BufferedMult-SKiDL](https://github.com/domesticmouse/BufferedMult-SKiDL) for an improved (and simplified) re-implementation.
+
 ## Purpose
 
 In modular synthesis, a **multiple** is used to split a single signal (such as control voltage, gates/triggers, or audio) and route it to multiple destinations simultaneously.
